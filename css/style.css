@@ -1,0 +1,154 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* Título */
+#titulo {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+/* Clase reutilizable */
+.ColorRojo {
+    color: #e63946;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e63946;
+}
+
+/* Contenido principal */
+main {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+main h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+main p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* Botón moderno */
+button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #c92d3a;
+    transform: scale(1.05);
+}
+
+/* Sección planes */
+section {
+    padding: 50px 20px;
+}
+
+section h2 {
+    margin-bottom: 35px;
+    font-size: 2rem;
+}
+
+/* Tarjetas de planes */
+article {
+    background-color: white;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+article h3 {
+    color: #e63946;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    padding: 35px;
+    margin-top: 40px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.08);
+}
+
+footer h2 {
+    margin-bottom: 15px;
+    color: #e63946;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+/* Inputs estilizados */
+input,
+textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #e63946;
+    box-shadow: 0 0 8px rgba(230,57,70,0.3);
+}
