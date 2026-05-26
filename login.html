@@ -4,83 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login SportClub</title>
+
+    <title>Login | SportClub</title>
 
     <link rel="stylesheet" href="./css/style_login.css">
 </head>
 
 <body>
 
-    <main class="contenedor-login">
+    <main class="login">
 
-        <!-- Logo -->
-        <header class="logo">
+        <img 
+            src="./img/logo.png" 
+            alt="Logo SportClub"
+            class="logo"
+        >
 
-            <img
-                src="./img/logo.png"
-                alt="Logo SportClub">
+        <section class="card">
 
-        </header>
+            <h1>Iniciar Sesión</h1>
 
-        <!-- Caja Login -->
-        <section class="caja-login">
-
-            <h2>Login</h2>
-
-            <!-- Formulario -->
             <form>
 
-                <!-- Email -->
-                <div class="grupo-input">
+                <input
+                    type="email"
+                    placeholder="Correo electrónico"
+                    required
+                >
 
-                    <label for="correo">
-                        Email:
-                    </label>
+                <input
+                    type="password"
+                    placeholder="Contraseña"
+                    required
+                >
 
-                    <input
-                        type="email"
-                        id="correo"
-                        placeholder="Ingresa tu correo"
-                        required>
-
-                </div>
-
-                <!-- Contraseña -->
-                <div class="grupo-input">
-
-                    <label for="password">
-                        Contraseña:
-                    </label>
-
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Ingresa tu contraseña"
-                        required>
-
-                </div>
-
-                <!-- Botón -->
                 <button type="submit">
                     Ingresar
                 </button>
 
             </form>
 
-            <!-- Links -->
-            <nav class="links-login">
+            <div class="links">
 
                 <a href="#">
                     ¿Olvidaste tu contraseña?
                 </a>
 
-                <span>|</span>
-
                 <a href="#">
                     Registrarse
                 </a>
 
-            </nav>
+            </div>
 
         </section>
 

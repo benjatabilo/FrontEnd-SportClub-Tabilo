@@ -1,87 +1,75 @@
-/* Reset básico */
+/* Reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+/* Página */
 body{
     font-family: Arial, Helvetica, sans-serif;
 
-    background: linear-gradient(to right, #1b1b2f, #162447);
+    background: linear-gradient(135deg, #0f172a, #1e293b);
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     min-height: 100vh;
-}
-
-/* Contenedor principal */
-.contenedor-login{
-    width: 100%;
-    max-width: 420px;
 
     padding: 20px;
 }
 
+/* Contenedor */
+.login{
+    width: 100%;
+    max-width: 400px;
+}
+
 /* Logo */
 .logo{
-    text-align: center;
+    width: 220px;
 
-    margin-bottom: 25px;
+    display: block;
+
+    margin: 0 auto 25px;
 }
 
-.logo img{
-    width: 260px;
-
-    max-width: 100%;
-}
-
-/* Caja login */
-.caja-login{
+/* Tarjeta */
+.card{
     background-color: #ffffff;
 
-    padding: 40px;
+    padding: 35px;
 
-    border-radius: 18px;
+    border-radius: 16px;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 /* Título */
-.caja-login h2{
+.card h1{
     text-align: center;
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
-    color: #222;
+    color: #111827;
 
-    font-size: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Formulario */
+form{
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
 }
 
 /* Inputs */
-.grupo-input{
-    margin-bottom: 20px;
-}
-
-.grupo-input label{
-    display: block;
-
-    margin-bottom: 8px;
-
-    font-weight: bold;
-
-    color: #444;
-}
-
-.grupo-input input{
-    width: 100%;
-
+input{
     padding: 14px;
 
-    border: 1px solid #ccc;
+    border: 1px solid #d1d5db;
 
     border-radius: 10px;
 
@@ -90,26 +78,23 @@ body{
     transition: 0.3s;
 }
 
-/* Focus input */
-.grupo-input input:focus{
-    border-color: #fca311;
-
+input:focus{
     outline: none;
 
-    box-shadow: 0 0 8px rgba(252,163,17,0.4);
+    border-color: #f59e0b;
+
+    box-shadow: 0 0 6px rgba(245,158,11,0.4);
 }
 
 /* Botón */
 button{
-    width: 100%;
+    background-color: #f59e0b;
 
-    padding: 14px;
-
-    background-color: #fca311;
-
-    color: #ffffff;
+    color: white;
 
     border: none;
+
+    padding: 14px;
 
     border-radius: 10px;
 
@@ -122,36 +107,29 @@ button{
     transition: 0.3s;
 }
 
-/* Hover botón */
 button:hover{
-    background-color: #e69500;
-
-    transform: translateY(-2px);
+    background-color: #d97706;
 }
 
 /* Links */
-.links-login{
-    margin-top: 25px;
+.links{
+    margin-top: 20px;
 
     display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 12px;
-
-    font-size: 0.9rem;
+    justify-content: space-between;
 }
 
-.links-login a{
+/* Enlaces */
+.links a{
     text-decoration: none;
 
-    color: #444;
+    color: #475569;
+
+    font-size: 0.9rem;
 
     transition: 0.3s;
 }
 
-.links-login a:hover{
-    color: #fca311;
+.links a:hover{
+    color: #f59e0b;
 }
