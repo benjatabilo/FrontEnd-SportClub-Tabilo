@@ -4,91 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - SportClub</title>
 
-    <title>Registro | SportClub</title>
-
-    <link rel="stylesheet" href="./css/style_registro.css">
+    <link rel="stylesheet" href="./css/style_register.css">
 </head>
 
 <body>
 
-    <main class="registro">
+    <main class="contenedor">
 
-        <img
-            src="./img/logo.png"
-            alt="Logo SportClub"
-            class="logo"
-        >
+        <section class="register-box">
 
-        <section class="card">
+            <img src="./img/logo.png" alt="Logo SportClub" class="logo">
 
             <h1>Crear Cuenta</h1>
 
             <form>
 
-                <input
-                    type="text"
-                    placeholder="Nombre completo"
-                    required
-                >
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" placeholder="Ingrese su nombre completo">
 
-                <input
-                    type="number"
-                    placeholder="Edad"
-                    required
-                >
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" placeholder="Ingrese su edad">
 
-                <select required>
-                    <option value="">
-                        ¿Practicas deporte?
-                    </option>
-
-                    <option>
-                        Sí
-                    </option>
-
-                    <option>
-                        No
-                    </option>
+                <label for="deporte">¿Practica deporte?</label>
+                <select id="deporte">
+                    <option>Seleccione una opción</option>
+                    <option>Sí</option>
+                    <option>No</option>
                 </select>
 
-                <input
-                    type="text"
-                    placeholder="Actividad de interés"
-                    required
-                >
+                <label for="actividad">Actividad de interés</label>
+                <input type="text" id="actividad" placeholder="Ej: Gym, Running, Fútbol">
 
-                <textarea
-                    placeholder="¿Cuáles son tus objetivos?"
-                    rows="4"
-                    required
-                ></textarea>
+                <label for="objetivos">Objetivos</label>
+                <textarea id="objetivos" placeholder="Escriba sus objetivos"></textarea>
 
-                <input
-                    type="email"
-                    placeholder="Correo electrónico"
-                    required
-                >
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" placeholder="Ingrese su correo">
 
-                <input
-                    type="password"
-                    placeholder="Crear contraseña"
-                    required
-                >
+                <label for="password">Crear contraseña</label>
+                <input type="password" id="password" placeholder="Ingrese su contraseña">
 
-                <button type="submit">
-                    Registrarse
-                </button>
+                <button type="submit">Registrarse</button>
 
             </form>
 
-            <div class="links">
-
-                <a href="./Login.html">
-                    Volver al login
-                </a>
-
-            </div>
+            <p class="login-link">
+                ¿Ya tienes cuenta?
+                <a href="Login.html">Iniciar sesión</a>
+            </p>
 
         </section>
 
