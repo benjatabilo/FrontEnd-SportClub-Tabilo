@@ -26,6 +26,7 @@ body {
     padding: 20px;
 }
 
+/*CAJA CONTTENEDORA DEL FOMRULARIO */
 .register-box {
     background-color: white;
 
@@ -38,20 +39,24 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/*IMAGEN LOGO*/
 .logo {
-    width: 120px;
+    width: 280px;
 
     display: block;
 
     margin: 0 auto 20px;
 }
 
+/*TITULO "CREAR CUENTA */
 h1 {
     text-align: center;
 
     margin-bottom: 25px;
 
     color: #0f172a;
+
+    font-size: 25px;
 }
 
 form {
@@ -93,7 +98,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #2563eb;
+    border-color: #d97706;
 }
 
 button {
@@ -101,7 +106,7 @@ button {
 
     padding: 14px;
 
-    background-color: #2563eb;
+    background-color: #f59e0b;
     color: white;
 
     border: none;
@@ -116,7 +121,7 @@ button {
 }
 
 button:hover {
-    background-color: #1d4ed8;
+    background-color: #d97706;
 }
 
 .login-link {
@@ -126,7 +131,7 @@ button:hover {
 }
 
 .login-link a {
-    color: #2563eb;
+    color: #d97706;
 
     text-decoration: none;
 
