@@ -46,5 +46,3 @@ Todo el código fue revisado, entendido y adaptado manualmente antes de ser util
 
 La IA fue utilizada como una herramienta de apoyo para el aprendizaje y desarrollo del proyecto, permitiendo entender mejor el funcionamiento y la implementación de cada componente utilizado.
 
-##
-.
