@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Registro - SportClub</title>
 
     <link rel="stylesheet" href="../css/style_register.css">
@@ -24,10 +25,15 @@
                 <label for="nombre">Nombre completo</label>
                 <input type="text" id="nombre" placeholder="Ingrese su nombre completo">
 
-                <label for="edad">Edad</label>
-                <input type="number" id="edad" min="16" placeholder="Debe ser mayor de 16 años">
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input type="date" id="fechaNacimiento">
+
+                <p class="mensaje-error">
+                    Debe ser mayor de 16 años.
+                </p>
 
                 <label for="deporte">¿Practica deporte?</label>
+
                 <select id="deporte">
                     <option>Seleccione una opción</option>
                     <option>Sí</option>
@@ -37,22 +43,50 @@
                 <label for="actividad">Actividad de interés</label>
                 <input type="text" id="actividad" placeholder="Ej: Gym, Running, Fútbol">
 
-                <label for="objetivos">Objetivos</label>
-                <textarea id="objetivos" placeholder="Escriba sus objetivos"></textarea>
+                <label for="objetivos">Información adicional</label>
+
+                <textarea id="objetivos"
+                    placeholder="Opcional"></textarea>
 
                 <label for="correo">Correo electrónico</label>
                 <input type="email" id="correo" placeholder="Ingrese su correo">
 
-                <label for="password">Crear contraseña</label>
-                <input type="password" id="password" placeholder="Ingrese su contraseña">
+                <p class="mensaje-error">
+                    Correo inválido.
+                </p>
 
-                <button type="submit">Registrarse</button>
+                <label for="password">Crear contraseña</label>
+
+                <input type="password" id="password"
+                    placeholder="Ingrese su contraseña">
+
+                <label for="confirmPassword">
+                    Confirmar contraseña
+                </label>
+
+                <input type="password" id="confirmPassword"
+                    placeholder="Repita su contraseña">
+
+                <p class="mensaje-error">
+                    Las contraseñas no coinciden.
+                </p>
+
+                <p class="mensaje-exito">
+                    Usuario registrado correctamente.
+                </p>
+
+                <button type="submit">
+                    Registrarse
+                </button>
 
             </form>
 
             <p class="login-link">
                 ¿Ya tienes cuenta?
-                <a href="./Login.html">Iniciar sesión</a>
+
+                <a href="./Login.html">
+                    Iniciar Sesion
+                </a>
             </p>
 
         </section>

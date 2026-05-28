@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recuperar Contraseña | SportClub</title>
+
+    <link rel="stylesheet" href="../css/style_recuperar.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <section class="card-recuperar">
+
+            <img 
+                src="../img/logo.png" 
+                alt="Logo SportClub"
+                class="logo"
+            >
+
+            <h1>Recuperar Contraseña</h1>
+
+            <p class="descripcion">
+                Ingresa tu correo electrónico y te enviaremos un enlace para recuperar tu contraseña.
+            </p>
+
+            <form>
+
+                <label for="correo">
+                    Correo electrónico
+                </label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="Ingrese su correo"
+                    required
+                >
+
+                <!-- MENSAJE VISUAL -->
+                <div class="mensaje-exito">
+                    Se ha enviado un enlace de recuperación al correo ingresado.
+                </div>
+
+                <button type="submit">
+                    Enviar
+                </button>
+
+            </form>
+
+            <p class="volver">
+                <a href="./Login.html">
+                    Volver
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

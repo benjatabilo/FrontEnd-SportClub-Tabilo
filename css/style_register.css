@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
 
-    background: linear-gradient(to right, #0f172a, #1e293b);
+    background: linear-gradient(to right, #2E1A47, #1b102b);
 
     min-height: 100vh;
 
@@ -26,37 +26,37 @@ body {
     padding: 20px;
 }
 
-/*CAJA CONTTENEDORA DEL FOMRULARIO */
+/* CAJA FORMULARIO */
 .register-box {
-    background-color: white;
+    background-color: #FFFFFF;
 
-    width: 420px;
+    width: 430px;
 
     padding: 40px;
 
     border-radius: 15px;
 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/*IMAGEN LOGO*/
+/* LOGO */
 .logo {
-    width: 280px;
+    width: 260px;
 
     display: block;
 
     margin: 0 auto 20px;
 }
 
-/*TITULO "CREAR CUENTA */
+/* TITULO */
 h1 {
     text-align: center;
 
     margin-bottom: 25px;
 
-    color: #0f172a;
+    color: #2E1A47;
 
-    font-size: 25px;
+    font-size: 20px;
 }
 
 form {
@@ -64,15 +64,17 @@ form {
     flex-direction: column;
 }
 
+/* LABELS */
 label {
     margin-top: 12px;
     margin-bottom: 5px;
 
     font-weight: bold;
 
-    color: #334155;
+    color: #2E1A47;
 }
 
+/* INPUTS */
 input,
 select,
 textarea {
@@ -87,26 +89,58 @@ textarea {
     font-family: Arial, sans-serif;
 
     outline: none;
+
+    transition: 0.3s;
 }
 
-textarea {
-    resize: none;
-
-    height: 80px;
-}
-
+/* EFECTO FOCUS */
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: #d97706;
+    border-color: #F2B705;
+
+    box-shadow: 0 0 5px rgba(242, 183, 5, 0.5);
 }
 
+/* TEXTAREA */
+textarea {
+    resize: none;
+
+    height: 90px;
+}
+
+/* MENSAJES ERROR */
+.mensaje-error {
+    color: #dc2626;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+
+    margin-bottom: 5px;
+}
+
+/* MENSAJE EXITO */
+.mensaje-exito {
+    background-color: #dcfce7;
+
+    color: #15803d;
+    border: 1px solid #86efac;
+    padding: 7px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;;
+    margin-top: 5px;
+}
+
+/* BOTON */
 button {
     margin-top: 25px;
 
     padding: 14px;
 
-    background-color: #f59e0b;
+    background-color: #F2B705;
+
     color: white;
 
     border: none;
@@ -115,23 +149,29 @@ button {
 
     font-size: 16px;
 
+    font-weight: bold;
+
     cursor: pointer;
 
     transition: 0.3s;
 }
 
+/* HOVER BOTON */
 button:hover {
-    background-color: #d97706;
+    background-color: #d99904;
 }
 
+/* LINK LOGIN */
 .login-link {
     text-align: center;
 
     margin-top: 20px;
+
+    color: #334155;
 }
 
 .login-link a {
-    color: #d97706;
+    color: #F2B705;
 
     text-decoration: none;
 

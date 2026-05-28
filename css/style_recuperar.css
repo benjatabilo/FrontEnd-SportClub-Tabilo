@@ -1,0 +1,177 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(135deg, #2E1A47, #1e293b);
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* CONTENEDOR */
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.card-recuperar{
+    width: 100%;
+    max-width: 430px;
+
+    background-color: #FFFFFF;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* LOGO */
+.logo{
+    width: 250px;
+
+    display: block;
+
+    margin: 0 auto 20px;
+}
+
+/* TITULO */
+h1{
+    text-align: center;
+
+    color: #2E1A47;
+
+    margin-bottom: 15px;
+
+    font-size: 20px;
+}
+
+/* TEXTO */
+.descripcion{
+    text-align: center;
+
+    color: #475569;
+
+    margin-bottom: 25px;
+
+    line-height: 1.5;
+}
+
+/* FORMULARIO */
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABEL */
+label{
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #334155;
+}
+
+/* INPUT */
+input{
+    padding: 14px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus{
+    border-color: #F2B705;
+
+    box-shadow: 0 0 5px rgba(242,183,5,0.5);
+}
+
+/* MENSAJE */
+.mensaje-exito{
+    background-color: #dcfce7;
+
+    color: #15803d;
+
+    border: 1px solid #86efac;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+/* BOTON */
+button{
+    background-color: #F2B705;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #d99d04;
+}
+
+/* VOLVER */
+.volver{
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+.volver a{
+    text-decoration: none;
+
+    color: #2E1A47;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.volver a:hover{
+    color: #F2B705;
+}
