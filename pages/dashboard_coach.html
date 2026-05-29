@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Coach - SportClub</title>
+
+    <link rel="stylesheet" href="../css/dashboard_coach.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo-section">
+            <img src="../img/logo.png" alt="Logo SportClub">
+            <h2>SportClub Coach</h2>
+        </div>
+
+        <div class="header-buttons">
+            <a href="#">Mi Perfil</a>
+            <a href="../index.html">Cerrar Sesión</a>
+        </div>
+
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Alumnos</a></li>
+                    <li><a href="#">Clases</a></li>
+                    <li><a href="#">Horarios</a></li>
+                </ul>
+            </nav>
+
+        </aside>
+
+        <!-- CONTENIDO -->
+        <main class="main-content">
+
+            <!-- BIENVENIDA -->
+            <section class="welcome">
+                <h1>Bienvenido Coach Javier</h1>
+                <p>Gestiona tus clases y ayuda a tus alumnos a alcanzar sus metas.</p>
+            </section>
+
+            <!-- PANEL RESUMEN -->
+            <section class="summary-cards">
+
+                <div class="card">
+                    <h3>Total Alumnos</h3>
+                    <p>48</p>
+                </div>
+
+                <div class="card">
+                    <h3>Clases Activas</h3>
+                    <p>12</p>
+                </div>
+
+                <div class="card">
+                    <h3>Horas Semanales</h3>
+                    <p>26 hrs</p>
+                </div>
+
+            </section>
+
+            <!-- TABLA ALUMNOS -->
+            <section class="table-section">
+
+                <h2>Lista de Alumnos</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Clase Asignada</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Benjamín Tabilo</td>
+                            <td>benjamin@gmail.com</td>
+                            <td>Crossfit</td>
+                        </tr>
+
+                        <tr>
+                            <td>Camila Soto</td>
+                            <td>camila@gmail.com</td>
+                            <td>Yoga</td>
+                        </tr>
+
+                        <tr>
+                            <td>Javier Rojas</td>
+                            <td>javier@gmail.com</td>
+                            <td>Funcional</td>
+                        </tr>
+
+                        <tr>
+                            <td>Matías Díaz</td>
+                            <td>matias@gmail.com</td>
+                            <td>Spinning</td>
+                        </tr>
+
+                        <tr>
+                            <td>Fernanda Silva</td>
+                            <td>fernanda@gmail.com</td>
+                            <td>Pilates</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+            <!-- CLASES ASIGNADAS -->
+            <section class="classes-section">
+
+                <h2>Clases Asignadas</h2>
+
+                <div class="classes-container">
+
+                    <div class="class-card">
+                        <h3>Crossfit</h3>
+                        <p>Lunes - 19:00 hrs</p>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>Yoga</h3>
+                        <p>Miércoles - 18:00 hrs</p>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>Funcional</h3>
+                        <p>Viernes - 20:00 hrs</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- HORARIOS -->
+            <section class="schedule-section">
+
+                <h2>Horarios Semanales</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Clase</th>
+                            <th>Día</th>
+                            <th>Hora</th>
+                            <th>Alumnos</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Crossfit</td>
+                            <td>Lunes</td>
+                            <td>19:00</td>
+                            <td>15</td>
+                        </tr>
+
+                        <tr>
+                            <td>Yoga</td>
+                            <td>Martes</td>
+                            <td>18:00</td>
+                            <td>12</td>
+                        </tr>
+
+                        <tr>
+                            <td>Spinning</td>
+                            <td>Miércoles</td>
+                            <td>20:00</td>
+                            <td>10</td>
+                        </tr>
+
+                        <tr>
+                            <td>Funcional</td>
+                            <td>Jueves</td>
+                            <td>17:00</td>
+                            <td>14</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pilates</td>
+                            <td>Viernes</td>
+                            <td>19:30</td>
+                            <td>11</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
