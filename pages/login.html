@@ -12,19 +12,50 @@
 
 <body>
 
-    <main class="login">
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-        <img 
-            src="../img/logo.png" 
-            alt="Logo SportClub"
-            class="logo"
-        >
+    <header>
+
+        <!-- LOGO -->
+        <div class="logo-header">
+            <img src="../img/logo.png" alt="Logo SportClub">
+        </div>
+
+        <!-- NAVBAR -->
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="../index.html#planes">Planes</a>
+            <a href="../index.html#beneficios">Beneficios</a>
+            <a href="../index.html#contacto">Contacto</a>
+
+            <a href="./login.html" class="btn-login">
+                Login
+            </a>
+        </nav>
+
+    </header>
+
+    <!-- =========================
+         LOGIN
+    ========================== -->
+
+    <main class="login-container">
 
         <section class="card">
 
+            <!-- LOGO -->
+            <img 
+                src="../img/logo.png" 
+                alt="Logo SportClub"
+                class="logo"
+            >
+
             <h1>Iniciar Sesión</h1>
 
-            <form>
+            <!-- FORM -->
+            <form action="./dashboard_usuario.html">
 
                 <input
                     type="email"
@@ -41,32 +72,38 @@
                 <button type="submit">
                     Ingresar
                 </button>
-                <!--Se agrega funcion para vincular el boton con el perfil usuario-->
-            </form action="dashboard_user.html">
 
+            </form>
+
+            <!-- LINKS -->
             <div class="links">
 
                 <a href="./recuperar.html">
                     ¿Olvidaste tu contraseña?
                 </a>
 
-                <!-- ENLACE AL REGISTER -->
                 <a href="./register.html">
                     Registrarse
                 </a>
 
             </div>
-<!--ACCESOS DIRECTOS PARA COACH Y ADM*/-->
+
+            <!-- ACCESOS -->
             <div class="accesos">
-                <p>Accesos Rapidos</p>
-                <a href="dashboard_coach.html"
-                    Dashboard Coach
-                </a>
-                <a href=""dashboard_admin.html>
-                    Dashboard Administrador
+
+                <p>Accesos rápidos</p>
+
+                <a href="./dashboard_usuario.html">
+                    Dashboard Usuario
                 </a>
 
-                
+                <a href="./dashboard_coach.html">
+                    Dashboard Coach
+                </a>
+
+                <a href="./dashboard_admin.html">
+                    Dashboard Administrador
+                </a>
 
             </div>
 

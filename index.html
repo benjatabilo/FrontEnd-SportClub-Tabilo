@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>SportClub</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- =========================
+         HEADER
+    ========================== -->
+
     <header>
 
+        <!-- LOGO -->
         <div class="logo">
             <img src="./img/logo.png" alt="Logo SportClub">
         </div>
 
+        <!-- NAVBAR -->
         <nav>
             <a href="#">Inicio</a>
             <a href="#planes">Planes</a>
             <a href="#beneficios">Beneficios</a>
             <a href="#contacto">Contacto</a>
-            <a href="./pages/login.html">Cuenta</a>
+            <a href="./pages/login.html" class="btn-login">Login</a>
         </nav>
 
     </header>
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
     <section class="hero">
 
         <div class="hero-text">
 
-            <h1>
-                Entrena tu cuerpo, fortalece tu mente
-            </h1>
+            <h1>Tu mejor versión comienza hoy</h1>
 
             <p>
-                En SportClub encontrarás los mejores planes deportivos,
-                entrenadores especializados y un ambiente ideal para alcanzar
-                tus objetivos.
+                Entrena con tecnología, disciplina y motivación en el club deportivo
+                más innovador de la ciudad.
             </p>
 
-            <a href="#planes" class="btn">
-                Ver Planes
+            <a href="./pages/registro.html" class="btn-hero">
+                Comenzar Ahora
             </a>
 
         </div>
 
+        <div class="hero-image">
+            <img src="./img/gym.jpg" alt="Entrenamiento SportClub">
+        </div>
+
     </section>
 
-    <!-- BENEFICIOS -->
+    <!-- =========================
+         BENEFICIOS
+    ========================== -->
+
     <section class="beneficios" id="beneficios">
 
         <h2>Beneficios</h2>
@@ -60,153 +71,146 @@
         <div class="cards">
 
             <div class="card">
-
-                <img src="./img/gym.png" alt="Gym">
-
-                <h3>Equipamiento Moderno</h3>
-
+                <img src="./img/beneficio1.png" alt="Entrenamiento">
+                <h3>Entrenamiento Personalizado</h3>
                 <p>
-                    Máquinas modernas y espacios amplios para todos
-                    nuestros socios.
+                    Rutinas adaptadas a tus objetivos y rendimiento.
                 </p>
-
             </div>
 
             <div class="card">
-
-                <img src="./img/trainer.png" alt="Trainer">
-
-                <h3>Entrenadores</h3>
-
+                <img src="./img/beneficio2.png" alt="Tecnología">
+                <h3>Seguimiento Digital</h3>
                 <p>
-                    Profesionales capacitados para ayudarte a cumplir
-                    tus metas deportivas.
+                    Controla tus avances mediante herramientas tecnológicas.
                 </p>
-
             </div>
 
             <div class="card">
-
-                <img src="./img/clock.png" alt="Horario">
-
-                <h3>Horarios Flexibles</h3>
-
+                <img src="./img/beneficio3.png" alt="Comunidad">
+                <h3>Comunidad Deportiva</h3>
                 <p>
-                    Entrena en el horario que más te acomode,
-                    todos los días.
+                    Comparte y crece junto a otros deportistas.
                 </p>
-
             </div>
 
         </div>
 
     </section>
 
-    <!-- PLANES -->
+    <!-- =========================
+         PLANES
+    ========================== -->
+
     <section class="planes" id="planes">
 
-        <h2>Planes</h2>
+        <h2>Planes SportClub</h2>
 
-        <div class="planes-container">
+        <div class="cards">
 
-            <div class="plan">
-
-                <h3>Básico</h3>
-
+            <div class="card-plan">
+                <h3>Plan Básico</h3>
                 <h4>$19.990</h4>
 
-                <p>Acceso al gimnasio</p>
-                <p>Horario limitado</p>
-                <p>Rutinas básicas</p>
+                <ul>
+                    <li>Acceso al gimnasio</li>
+                    <li>Rutinas básicas</li>
+                    <li>Horario limitado</li>
+                </ul>
 
+                <button>Elegir Plan</button>
             </div>
 
-            <div class="plan">
+            <div class="card-plan destacado">
+                <h3>Plan Pro</h3>
+                <h4>$34.990</h4>
 
-                <h3>Premium</h3>
+                <ul>
+                    <li>Acceso total</li>
+                    <li>Entrenador personal</li>
+                    <li>Clases premium</li>
+                </ul>
 
-                <h4>$29.990</h4>
-
-                <p>Acceso ilimitado</p>
-                <p>Clases grupales</p>
-                <p>Entrenamiento personalizado</p>
-
+                <button>Elegir Plan</button>
             </div>
 
-            <div class="plan">
+            <div class="card-plan">
+                <h3>Plan Elite</h3>
+                <h4>$49.990</h4>
 
-                <h3>Elite</h3>
+                <ul>
+                    <li>Seguimiento completo</li>
+                    <li>Nutricionista</li>
+                    <li>Acceso VIP</li>
+                </ul>
 
-                <h4>$39.990</h4>
-
-                <p>Acceso completo</p>
-                <p>Nutricionista</p>
-                <p>Entrenador exclusivo</p>
-
+                <button>Elegir Plan</button>
             </div>
 
         </div>
 
     </section>
 
-    <!-- SOBRE EL CLUB -->
+    <!-- =========================
+         SOBRE EL CLUB
+    ========================== -->
+
     <section class="sobre">
 
-        <h2>Sobre el Club</h2>
+        <h2>Sobre SportClub</h2>
 
-        <div class="sobre-container">
+        <p>
+            SportClub nace con la misión de transformar vidas mediante
+            entrenamiento físico y tecnología aplicada al bienestar.
+        </p>
 
-            <div class="info">
+        <div class="info-sobre">
 
-                <h3>Historia</h3>
-
-                <p>
-                    SportClub nació con el objetivo de entregar un espacio
-                    moderno y profesional para mejorar la salud y bienestar
-                    de las personas.
-                </p>
-
-            </div>
-
-            <div class="info">
-
+            <div class="box">
                 <h3>Misión</h3>
 
                 <p>
-                    Ayudar a nuestros socios a desarrollar hábitos saludables
-                    mediante entrenamiento y acompañamiento profesional.
+                    Promover el bienestar físico y mental mediante
+                    entrenamientos deportivos y tecnología aplicada.
                 </p>
-
             </div>
 
-            <div class="info">
-
+            <div class="box">
                 <h3>Visión</h3>
 
                 <p>
-                    Ser el club deportivo líder en innovación, bienestar
-                    y experiencia deportiva.
+                    Ser el club deportivo referente en innovación
+                    y transformación personal.
                 </p>
-
             </div>
 
         </div>
 
     </section>
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer id="contacto">
 
-        <p>Instagram: @SportClub</p>
+        <h3>SportClub</h3>
 
-        <p>Correo: contacto@sportclub.cl</p>
+        <p>📧 contacto@sportclub.cl</p>
 
-        <p>Teléfono: +56 9 1234 5678</p>
+        <p>📞 +56 9 1234 5678</p>
 
-        <p>© 2025 SportClub - Todos los derechos reservados</p>
+        <div class="redes">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">TikTok</a>
+        </div>
+
+        <p class="copy">
+            © 2026 SportClub - Todos los derechos reservados
+        </p>
 
     </footer>
 
 </body>
-
 </html>

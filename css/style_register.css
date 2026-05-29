@@ -1,183 +1,235 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
+/* BODY */
 
-    background: linear-gradient(to right, #2E1A47, #1b102b);
-
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(to right, #2E1A47, #1b1030);
+    min-height:100vh;
 }
 
-.contenedor {
-    width: 100%;
+/* =========================
+   HEADER
+========================= */
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+header{
+    width:100%;
+    background:#2E1A47;
 
-    padding: 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 60px;
 }
 
-/* CAJA FORMULARIO */
-.register-box {
-    background-color: #FFFFFF;
+/* LOGO NAV */
 
-    width: 430px;
+.logo-nav img{
+    width:160px;
+}
 
-    padding: 40px;
+/* =========================
+   NAVBAR
+========================= */
 
-    border-radius: 15px;
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+}
+
+/* BOTON LOGIN */
+
+.btn-login{
+    background:#F2B705;
+    color:#2E1A47;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:50px 20px;
+}
+
+/* =========================
+   CAJA REGISTRO
+========================= */
+
+.register-box{
+    background:white;
+
+    width:450px;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
 /* LOGO */
-.logo {
-    width: 260px;
 
-    display: block;
+.logo{
+    width:220px;
 
-    margin: 0 auto 20px;
+    display:block;
+
+    margin:0 auto 20px;
 }
 
 /* TITULO */
-h1 {
-    text-align: center;
 
-    margin-bottom: 25px;
+h1{
+    text-align:center;
 
-    color: #2E1A47;
+    margin-bottom:30px;
 
-    font-size: 20px;
+    color:#2E1A47;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+/* =========================
+   FORM
+========================= */
+
+form{
+    display:flex;
+    flex-direction:column;
 }
 
 /* LABELS */
-label {
-    margin-top: 12px;
-    margin-bottom: 5px;
 
-    font-weight: bold;
+label{
+    margin-bottom:8px;
 
-    color: #2E1A47;
+    font-weight:bold;
+
+    color:#2E1A47;
 }
 
 /* INPUTS */
+
 input,
 select,
-textarea {
-    padding: 12px;
+textarea{
+    margin-bottom:18px;
 
-    border: 1px solid #cbd5e1;
+    padding:14px;
 
-    border-radius: 8px;
+    border:1px solid #ccc;
 
-    font-size: 14px;
+    border-radius:10px;
 
-    font-family: Arial, sans-serif;
+    font-size:14px;
 
-    outline: none;
-
-    transition: 0.3s;
+    outline:none;
 }
 
-/* EFECTO FOCUS */
+/* FOCUS */
+
 input:focus,
 select:focus,
-textarea:focus {
-    border-color: #F2B705;
-
-    box-shadow: 0 0 5px rgba(242, 183, 5, 0.5);
+textarea:focus{
+    border-color:#F2B705;
 }
 
 /* TEXTAREA */
-textarea {
-    resize: none;
 
-    height: 90px;
-}
-
-/* MENSAJES ERROR */
-.mensaje-error {
-    color: #dc2626;
-
-    font-size: 13px;
-
-    margin-top: 5px;
-
-    margin-bottom: 5px;
-}
-
-/* MENSAJE EXITO */
-.mensaje-exito {
-    background-color: #dcfce7;
-
-    color: #15803d;
-    border: 1px solid #86efac;
-    padding: 7px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 13px;;
-    margin-top: 5px;
+textarea{
+    resize:none;
+    height:100px;
 }
 
 /* BOTON */
-button {
-    margin-top: 25px;
 
-    padding: 14px;
+button{
+    background:#F2B705;
+    color:white;
 
-    background-color: #F2B705;
+    border:none;
 
-    color: white;
+    padding:14px;
 
-    border: none;
+    border-radius:10px;
 
-    border-radius: 8px;
+    font-size:16px;
 
-    font-size: 16px;
+    font-weight:bold;
 
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: 0.3s;
+    cursor:pointer;
 }
 
-/* HOVER BOTON */
-button:hover {
-    background-color: #d99904;
+/* MENSAJES ERROR */
+
+.mensaje-error{
+    color:red;
+
+    font-size:13px;
+
+    margin-top:-10px;
+    margin-bottom:15px;
+}
+
+/* MENSAJE EXITO */
+
+.mensaje-exito{
+    background:#dcfce7;
+
+    color:#166534;
+
+    border:1px solid #86efac;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
 }
 
 /* LINK LOGIN */
-.login-link {
-    text-align: center;
 
-    margin-top: 20px;
+.login-link{
+    text-align:center;
 
-    color: #334155;
+    margin-top:25px;
+
+    color:#2E1A47;
 }
 
-.login-link a {
-    color: #F2B705;
+.login-link a{
+    color:#F2B705;
 
-    text-decoration: none;
+    text-decoration:none;
 
-    font-weight: bold;
-}
-
-.login-link a:hover {
-    text-decoration: underline;
+    font-weight:bold;
 }

@@ -12,6 +12,27 @@
 
 <body>
 
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo-nav">
+            <img src="../img/logo.png" alt="Logo SportClub">
+        </div>
+
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="../index.html#planes">Planes</a>
+            <a href="../index.html#beneficios">Beneficios</a>
+            <a href="../index.html#contacto">Contacto</a>
+
+            <a href="./login.html" class="btn-login">
+                Login
+            </a>
+        </nav>
+
+    </header>
+
+    <!-- CONTENEDOR -->
     <main class="contenedor">
 
         <section class="register-box">
@@ -23,57 +44,111 @@
             <form>
 
                 <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" placeholder="Ingrese su nombre completo">
 
-                <label for="fechaNacimiento">Fecha de nacimiento</label>
-                <input type="date" id="fechaNacimiento">
+                <input 
+                    type="text" 
+                    id="nombre" 
+                    placeholder="Ingrese su nombre completo"
+                    required
+                >
+
+                <label for="fechaNacimiento">
+                    Fecha de nacimiento
+                </label>
+
+                <input 
+                    type="date" 
+                    id="fechaNacimiento"
+                    required
+                >
 
                 <p class="mensaje-error">
                     Debe ser mayor de 16 años.
                 </p>
 
-                <label for="deporte">¿Practica deporte?</label>
+                <label for="deporte">
+                    ¿Practica deporte?
+                </label>
 
                 <select id="deporte">
-                    <option>Seleccione una opción</option>
-                    <option>Sí</option>
-                    <option>No</option>
+
+                    <option>
+                        Seleccione una opción
+                    </option>
+
+                    <option>
+                        Sí
+                    </option>
+
+                    <option>
+                        No
+                    </option>
+
                 </select>
 
-                <label for="actividad">Actividad de interés</label>
-                <input type="text" id="actividad" placeholder="Ej: Gym, Running, Fútbol">
+                <label for="actividad">
+                    Actividad de interés
+                </label>
 
-                <label for="objetivos">Información adicional</label>
+                <input 
+                    type="text" 
+                    id="actividad" 
+                    placeholder="Ej: Gym, Running, Fútbol"
+                >
 
-                <textarea id="objetivos"
-                    placeholder="Opcional"></textarea>
+                <label for="objetivos">
+                    Información adicional
+                </label>
 
-                <label for="correo">Correo electrónico</label>
-                <input type="email" id="correo" placeholder="Ingrese su correo">
+                <textarea 
+                    id="objetivos"
+                    placeholder="Opcional"
+                ></textarea>
+
+                <label for="correo">
+                    Correo electrónico
+                </label>
+
+                <input 
+                    type="email" 
+                    id="correo" 
+                    placeholder="Ingrese su correo"
+                    required
+                >
 
                 <p class="mensaje-error">
                     Correo inválido.
                 </p>
 
-                <label for="password">Crear contraseña</label>
+                <label for="password">
+                    Crear contraseña
+                </label>
 
-                <input type="password" id="password"
-                    placeholder="Ingrese su contraseña">
+                <input 
+                    type="password" 
+                    id="password"
+                    placeholder="Ingrese su contraseña"
+                    required
+                >
 
                 <label for="confirmPassword">
                     Confirmar contraseña
                 </label>
 
-                <input type="password" id="confirmPassword"
-                    placeholder="Repita su contraseña">
+                <input 
+                    type="password" 
+                    id="confirmPassword"
+                    placeholder="Repita su contraseña"
+                    required
+                >
 
                 <p class="mensaje-error">
                     Las contraseñas no coinciden.
                 </p>
 
-                <p class="mensaje-exito">
+                <div class="mensaje-exito">
                     Usuario registrado correctamente.
-                </p>
+                </div>
 
                 <button type="submit">
                     Registrarse
@@ -82,11 +157,13 @@
             </form>
 
             <p class="login-link">
+
                 ¿Ya tienes cuenta?
 
-                <a href="./Login.html">
-                    Iniciar Sesion
+                <a href="./login.html">
+                    Iniciar Sesión
                 </a>
+
             </p>
 
         </section>
