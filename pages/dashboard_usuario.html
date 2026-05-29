@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Dashboard Usuario - SportClub</title>
 
     <link rel="stylesheet" href="../css/dashboard_usuario.css">
@@ -15,7 +16,11 @@
     <header class="header">
 
         <div class="logo-container">
-            <img src="../assets/img/logo.png" alt="Logo SportClub">
+            <img src="../img/logo.png" alt="Logo SportClub" class="logo">
+            <div>
+                <h2>SportClub</h2>
+                <p>Tu mejor versión comienza hoy</p>
+            </div>
         </div>
 
         <div class="header-buttons">
@@ -25,169 +30,186 @@
 
     </header>
 
-    <!-- CONTENEDOR PRINCIPAL -->
-    <div class="dashboard-container">
+    <!-- NAVEGACION -->
+    <nav class="navbar">
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
+        <a href="#">Inicio</a>
+        <a href="#">Reservas</a>
+        <a href="#">Clases</a>
+        <a href="#">Mi Perfil</a>
 
-            <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Reservas</a></li>
-                    <li><a href="#">Clases</a></li>
-                    <li><a href="#">Mi Perfil</a></li>
-                </ul>
-            </nav>
+    </nav>
 
-        </aside>
+    <!-- CONTENIDO -->
+    <main class="dashboard">
 
-        <!-- CONTENIDO -->
-        <main class="main-content">
+        <!-- BIENVENIDA -->
+        <section class="bienvenida">
 
-            <!-- BIENVENIDA -->
-            <section class="welcome-card">
-
+            <div>
                 <h1>Bienvenido Javier</h1>
 
                 <p>
-                    Continúa entrenando para alcanzar tus metas.
+                    Continúa entrenando para alcanzar tus metas y mejorar tu rendimiento cada día.
                 </p>
+            </div>
 
-            </section>
+            <button>Reservar Clase</button>
 
-            <!-- RESERVAS -->
-            <section class="reservas">
+        </section>
 
-                <h2>Mis Reservas</h2>
+        <!-- RESUMEN -->
+        <section class="cards-resumen">
 
-                <table>
+            <div class="card">
+                <h3>Reservas Activas</h3>
+                <p>5</p>
+            </div>
 
-                    <thead>
-                        <tr>
-                            <th>Clase</th>
-                            <th>Día</th>
-                            <th>Hora</th>
-                            <th>Coach</th>
-                        </tr>
-                    </thead>
+            <div class="card">
+                <h3>Clases Disponibles</h3>
+                <p>12</p>
+            </div>
 
-                    <tbody>
+            <div class="card">
+                <h3>Horas Entrenadas</h3>
+                <p>18 hrs</p>
+            </div>
 
-                        <tr>
-                            <td>Spinning</td>
-                            <td>Lunes</td>
-                            <td>18:00</td>
-                            <td>Carla Soto</td>
-                        </tr>
+        </section>
 
-                        <tr>
-                            <td>Crossfit</td>
-                            <td>Martes</td>
-                            <td>19:00</td>
-                            <td>Pedro Díaz</td>
-                        </tr>
+        <!-- RESERVAS -->
+        <section class="panel">
 
-                        <tr>
-                            <td>Yoga</td>
-                            <td>Miércoles</td>
-                            <td>17:00</td>
-                            <td>María López</td>
-                        </tr>
+            <h2>Mis Reservas</h2>
 
-                        <tr>
-                            <td>Running</td>
-                            <td>Jueves</td>
-                            <td>20:00</td>
-                            <td>Felipe Rojas</td>
-                        </tr>
+            <table>
 
-                        <tr>
-                            <td>Funcional</td>
-                            <td>Viernes</td>
-                            <td>16:00</td>
-                            <td>Camila Torres</td>
-                        </tr>
+                <thead>
+                    <tr>
+                        <th>Clase</th>
+                        <th>Día</th>
+                        <th>Hora</th>
+                        <th>Coach</th>
+                    </tr>
+                </thead>
 
-                    </tbody>
+                <tbody>
 
-                </table>
+                    <tr>
+                        <td>Crossfit</td>
+                        <td>Lunes</td>
+                        <td>19:00</td>
+                        <td>Martín Rojas</td>
+                    </tr>
 
-            </section>
+                    <tr>
+                        <td>Yoga</td>
+                        <td>Martes</td>
+                        <td>18:00</td>
+                        <td>Camila Soto</td>
+                    </tr>
 
-            <!-- CLASES -->
-            <section class="clases">
+                    <tr>
+                        <td>Spinning</td>
+                        <td>Miércoles</td>
+                        <td>20:00</td>
+                        <td>Felipe Díaz</td>
+                    </tr>
 
-                <h2>Clases Disponibles</h2>
+                    <tr>
+                        <td>Funcional</td>
+                        <td>Jueves</td>
+                        <td>17:00</td>
+                        <td>Ignacio Pérez</td>
+                    </tr>
 
-                <div class="cards-container">
+                    <tr>
+                        <td>Boxeo</td>
+                        <td>Viernes</td>
+                        <td>21:00</td>
+                        <td>Diego Morales</td>
+                    </tr>
 
-                    <div class="card">
+                </tbody>
 
-                        <div class="icono">🏋️</div>
+            </table>
 
-                        <h3>Crossfit</h3>
+        </section>
 
-                        <p>
-                            Entrenamiento de alta intensidad para mejorar fuerza y resistencia.
-                        </p>
+        <!-- CLASES -->
+        <section class="clases">
 
-                        <button>Reservar</button>
+            <h2>Clases Disponibles</h2>
 
-                    </div>
+            <div class="clases-grid">
 
-                    <div class="card">
+                <div class="clase-card">
 
-                        <div class="icono">🧘</div>
+                    <img src="../img/crossfit.jpg" alt="Crossfit">
 
-                        <h3>Yoga</h3>
+                    <h3>Crossfit</h3>
 
-                        <p>
-                            Mejora tu flexibilidad y bienestar físico y mental.
-                        </p>
+                    <p>
+                        Entrenamiento de alta intensidad para mejorar fuerza y resistencia.
+                    </p>
 
-                        <button>Ver más</button>
-
-                    </div>
-
-                    <div class="card">
-
-                        <div class="icono">🚴</div>
-
-                        <h3>Spinning</h3>
-
-                        <p>
-                            Sesiones intensas de bicicleta indoor con coaches expertos.
-                        </p>
-
-                        <button>Inscribirse</button>
-
-                    </div>
+                    <button>Reservar</button>
 
                 </div>
 
-            </section>
+                <div class="clase-card">
 
-            <!-- PERFIL -->
-            <section class="perfil-rapido">
+                    <img src="../img/yoga.jpg" alt="Yoga">
 
-                <h2>Perfil Rápido</h2>
+                    <h3>Yoga</h3>
 
-                <div class="perfil-info">
+                    <p>
+                        Mejora flexibilidad, concentración y bienestar físico.
+                    </p>
 
-                    <p><strong>Nombre:</strong> Javier Pérez</p>
-
-                    <p><strong>Correo:</strong> javier@sportclub.cl</p>
-
-                    <p><strong>Deporte Favorito:</strong> Running</p>
+                    <button>Ver Más</button>
 
                 </div>
 
-            </section>
+                <div class="clase-card">
 
-        </main>
+                    <img src="../img/spinning.jpg" alt="Spinning">
 
-    </div>
+                    <h3>Spinning</h3>
+
+                    <p>
+                        Clase cardiovascular intensa para quemar calorías.
+                    </p>
+
+                    <button>Inscribirse</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PERFIL -->
+        <section class="perfil-rapido">
+
+            <h2>Perfil Rápido</h2>
+
+            <div class="perfil-box">
+
+                <p><strong>Nombre:</strong> Javier Morales</p>
+
+                <p><strong>Correo:</strong> javier@sportclub.cl</p>
+
+                <p><strong>Deporte Favorito:</strong> Crossfit</p>
+
+                <p><strong>Plan:</strong> Premium</p>
+
+            </div>
+
+        </section>
+
+    </main>
 
 </body>
 
