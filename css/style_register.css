@@ -6,7 +6,7 @@
     box-sizing:border-box;
 }
 
-/* BODY */
+/* CUERPO DE LA PAGINA */
 
 body{
     font-family:Arial, Helvetica, sans-serif;
@@ -14,9 +14,7 @@ body{
     min-height:100vh;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* ENCABEZADO */
 
 header{
     width:100%;
@@ -29,15 +27,13 @@ header{
     padding:20px 60px;
 }
 
-/* LOGO NAV */
+/* LOGO BARRA DE NAVEGACION */
 
 .logo-nav img{
     width:160px;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* BARRA DE NAVEGACIÓN*/
 
 nav{
     display:flex;
@@ -64,9 +60,7 @@ nav a{
     font-weight:bold;
 }
 
-/* =========================
-   CONTENEDOR
-========================= */
+/* CONTENEDOR */
 
 .contenedor{
     width:100%;
@@ -78,9 +72,7 @@ nav a{
     padding:50px 20px;
 }
 
-/* =========================
-   CAJA REGISTRO
-========================= */
+/* CAJA FORMULARIO REGISTRO */
 
 .register-box{
     background:white;
@@ -104,7 +96,7 @@ nav a{
     margin:0 auto 20px;
 }
 
-/* TITULO */
+/* AJUSTE TITULO: REGISTRARSE */
 
 h1{
     text-align:center;
@@ -114,9 +106,7 @@ h1{
     color:#2E1A47;
 }
 
-/* =========================
-   FORM
-========================= */
+/* CONFIG FORMULARIO */
 
 form{
     display:flex;
@@ -216,7 +206,7 @@ button{
     margin-bottom:20px;
 }
 
-/* LINK LOGIN */
+/* BOTON LOGIN LINK */
 
 .login-link{
     text-align:center;

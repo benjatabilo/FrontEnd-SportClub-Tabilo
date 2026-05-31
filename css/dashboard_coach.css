@@ -21,6 +21,7 @@ body {
     align-items: center;
 
     padding: 15px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .logo-section {
@@ -39,6 +40,7 @@ body {
 }
 
 .header-buttons a {
+    
     text-decoration: none;
 
     color: white;
@@ -48,6 +50,7 @@ body {
     padding: 10px 15px;
 
     border-radius: 8px;
+    font-weight: bold;
 
     transition: 0.3s;
 }

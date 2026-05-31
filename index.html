@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SportClub</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
@@ -17,18 +21,26 @@
 
     <header>
 
-        <!-- LOGO -->
         <div class="logo">
-            <img src="./img/logo.png" alt="Logo SportClub">
+
+            <img src="./assets/img/logo.png" alt="Logo SportClub">
+
         </div>
 
-        <!-- NAVBAR -->
         <nav>
+
             <a href="#">Inicio</a>
-            <a href="#planes">Planes</a>
+
             <a href="#beneficios">Beneficios</a>
-            <a href="#contacto">Contacto</a>
-            <a href="./pages/login.html" class="btn-login">Login</a>
+
+            <a href="#planes">Planes</a>
+
+            <a href="#sobre">Nosotros</a>
+
+            <a href="./pages/login.html" class="btn-login">
+                Iniciar Sesión
+            </a>
+
         </nav>
 
     </header>
@@ -39,23 +51,25 @@
 
     <section class="hero">
 
-        <div class="hero-text">
+        <div class="hero-content">
 
-            <h1>Tu mejor versión comienza hoy</h1>
+            <div class="hero-text">
 
-            <p>
-                Entrena con tecnología, disciplina y motivación en el club deportivo
-                más innovador de la ciudad.
-            </p>
+                <h1>
+                    Tu mejor versión comienza hoy
+                </h1>
 
-            <a href="./pages/registro.html" class="btn-hero">
-                Comenzar Ahora
-            </a>
+                <p>
+                    Entrena con tecnología, disciplina y motivación
+                    en el club deportivo más innovador de la ciudad.
+                </p>
 
-        </div>
+                <a href="./pages/register.html" class="btn-hero">
+                    Comenzar Ahora
+                </a>
 
-        <div class="hero-image">
-            <img src="./img/gym.jpg" alt="Entrenamiento SportClub">
+            </div>
+
         </div>
 
     </section>
@@ -66,32 +80,52 @@
 
     <section class="beneficios" id="beneficios">
 
-        <h2>Beneficios</h2>
+        <h2>
+            ¿Por qué elegir SportClub?
+        </h2>
 
         <div class="cards">
 
             <div class="card">
-                <img src="./img/beneficio1.png" alt="Entrenamiento">
-                <h3>Entrenamiento Personalizado</h3>
+
+                <img src="./assets/img/coach.jpg" alt="Entrenamiento">
+
+                <h3>
+                    Entrenamiento Profesional
+                </h3>
+
                 <p>
-                    Rutinas adaptadas a tus objetivos y rendimiento.
+                    Contamos con entrenadores certificados y programas personalizados.
                 </p>
+
             </div>
 
             <div class="card">
-                <img src="./img/beneficio2.png" alt="Tecnología">
-                <h3>Seguimiento Digital</h3>
+
+                <img src="./assets/img/equipamento.jpg" alt="Tecnología">
+
+                <h3>
+                    Tecnología Deportiva
+                </h3>
+
                 <p>
-                    Controla tus avances mediante herramientas tecnológicas.
+                    Equipamiento moderno para potenciar tu rendimiento físico.
                 </p>
+
             </div>
 
             <div class="card">
-                <img src="./img/beneficio3.png" alt="Comunidad">
-                <h3>Comunidad Deportiva</h3>
+
+                <img src="./assets/img/comunidad.jpg" alt="Comunidad">
+
+                <h3>
+                    Comunidad Fitness
+                </h3>
+
                 <p>
-                    Comparte y crece junto a otros deportistas.
+                    Forma parte de un ambiente motivador y saludable.
                 </p>
+
             </div>
 
         </div>
@@ -104,47 +138,76 @@
 
     <section class="planes" id="planes">
 
-        <h2>Planes SportClub</h2>
+        <h2>
+            Nuestros Planes
+        </h2>
 
         <div class="cards">
 
             <div class="card-plan">
+
                 <h3>Plan Básico</h3>
+
                 <h4>$19.990</h4>
 
                 <ul>
+
                     <li>Acceso al gimnasio</li>
-                    <li>Rutinas básicas</li>
+
                     <li>Horario limitado</li>
+
+                    <li>1 clase grupal</li>
+
                 </ul>
 
-                <button>Elegir Plan</button>
+                <button>
+                    Elegir Plan
+                </button>
+
             </div>
 
             <div class="card-plan destacado">
-                <h3>Plan Pro</h3>
+
+                <h3>Plan Premium</h3>
+
                 <h4>$34.990</h4>
 
                 <ul>
-                    <li>Acceso total</li>
+
+                    <li>Acceso ilimitado</li>
+
+                    <li>Clases grupales</li>
+
                     <li>Entrenador personal</li>
-                    <li>Clases premium</li>
+
                 </ul>
 
-                <button>Elegir Plan</button>
+                <button>
+                    Elegir Plan
+                </button>
+
             </div>
 
             <div class="card-plan">
+
                 <h3>Plan Elite</h3>
+
                 <h4>$49.990</h4>
 
                 <ul>
-                    <li>Seguimiento completo</li>
+
+                    <li>Todo incluido</li>
+
                     <li>Nutricionista</li>
-                    <li>Acceso VIP</li>
+
+                    <li>Zona VIP</li>
+
                 </ul>
 
-                <button>Elegir Plan</button>
+                <button>
+                    Elegir Plan
+                </button>
+
             </div>
 
         </div>
@@ -152,36 +215,40 @@
     </section>
 
     <!-- =========================
-         SOBRE EL CLUB
+         SOBRE NOSOTROS
     ========================== -->
 
-    <section class="sobre">
+    <section class="sobre" id="sobre">
 
-        <h2>Sobre SportClub</h2>
+        <h2>
+            Sobre SportClub
+        </h2>
 
         <p>
-            SportClub nace con la misión de transformar vidas mediante
-            entrenamiento físico y tecnología aplicada al bienestar.
+            Somos un club deportivo enfocado en mejorar la salud,
+            el rendimiento físico y el bienestar integral de nuestros socios.
         </p>
 
         <div class="info-sobre">
 
             <div class="box">
+
                 <h3>Misión</h3>
 
                 <p>
-                    Promover el bienestar físico y mental mediante
-                    entrenamientos deportivos y tecnología aplicada.
+                    Inspirar hábitos saludables mediante entrenamiento y disciplina.
                 </p>
+
             </div>
 
             <div class="box">
+
                 <h3>Visión</h3>
 
                 <p>
-                    Ser el club deportivo referente en innovación
-                    y transformación personal.
+                    Ser el club deportivo líder en innovación y experiencia fitness.
                 </p>
+
             </div>
 
         </div>
@@ -192,18 +259,22 @@
          FOOTER
     ========================== -->
 
-    <footer id="contacto">
+    <footer>
 
         <h3>SportClub</h3>
 
-        <p>📧 contacto@sportclub.cl</p>
-
-        <p>📞 +56 9 1234 5678</p>
+        <p>
+            Entrena hoy para ser mejor mañana.
+        </p>
 
         <div class="redes">
+
             <a href="#">Instagram</a>
+
             <a href="#">Facebook</a>
+
             <a href="#">TikTok</a>
+
         </div>
 
         <p class="copy">
@@ -213,4 +284,5 @@
     </footer>
 
 </body>
+
 </html>
