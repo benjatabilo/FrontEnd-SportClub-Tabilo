@@ -12,20 +12,76 @@ body{
     background: linear-gradient(135deg, #2E1A47, #1e293b);
 
     min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background: #2E1A47;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
-    padding: 20px;
+    padding: 18px 70px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+/* LOGO BARRA */
+
+.logo-header img{
+    width: 170px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+/*Ajuste letras (botones) de barra de navegacion*/
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* BOTON Inciiar Sesion */
+
+.btn-login{
+    background: #F2B705;
+    color: #2E1A47;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
 }
 
 /* CONTENEDOR */
 .contenedor{
     width: 100%;
+
+    min-height: 80vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 40px 20px;
 }
 
 /* CARD */
@@ -183,6 +239,7 @@ footer{
     text-align:center;
 
     padding:50px 20px;
+    margin-top: 80px;
 }
 
 footer h3{

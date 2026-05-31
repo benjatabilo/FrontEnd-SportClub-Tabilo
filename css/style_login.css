@@ -29,7 +29,14 @@ header{
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 60px;
+    padding: 18px 70px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
 }
 
 /* LOGO BARRA */
@@ -224,9 +231,7 @@ button{
     border-radius: 8px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* Responsive */
 
 @media(max-width: 768px){
 
