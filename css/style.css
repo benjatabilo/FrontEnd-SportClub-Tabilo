@@ -2,28 +2,29 @@
    RESET
 ========================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* =========================
    BODY
 ========================= */
 
-body{
-    background:#f5f5f5;
-    color:#222;
+body {
+    background: #f4f4f7;
+    color: #222;
+    scroll-behavior: smooth;
 }
 
 /* =========================
    HEADER
 ========================= */
 
-header{
-    background: #2E1A47;
+header {
+    background: #1a1a1a;
 
     display: flex;
     justify-content: space-between;
@@ -31,7 +32,9 @@ header{
 
     padding: 18px 70px;
 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+
+    border-bottom: 1px solid #2f2f2f;
 
     position: sticky;
     top: 0;
@@ -39,308 +42,292 @@ header{
     z-index: 1000;
 }
 
-.logo img{
-    width:170px;
+.logo img {
+    width: 150px;
 }
 
 /* =========================
    NAVBAR
 ========================= */
 
-nav{
-    display:flex;
-
-    gap:25px;
-
-    align-items:center;
+nav {
+    display: flex;
+    gap: 22px;
+    align-items: center;
 }
 
-nav a{
-    color:white;
-
-    text-decoration:none;
-
-    font-size:16px;
-
-    font-weight:bold;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    opacity: 0.9;
+    transition: 0.3s;
 }
 
-.btn-login{
-    background:#F2B705;
+nav a:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
 
-    color:#2E1A47;
+.btn-login {
+    background: #F2B705;
+    color: #2E1A47;
 
-    padding:10px 20px;
+    padding: 10px 18px;
+    border-radius: 10px;
 
-    border-radius:8px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    transform: scale(1.05);
 }
 
 /* =========================
-   HERO
+   HERO (CENTRADO SOLO AJUSTADO)
 ========================= */
 
-.hero{
+.hero {
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
 
-    min-height:90vh;
-
-    display:flex;
-
-    align-items:center;
-
-    padding:80px 60px;
+    padding: 0 8%;
 
     background:
-    linear-gradient(
-        rgba(46, 26, 71, 0.82),
-        rgba(46, 26, 71, 0.82)
-    ),
-    url("../assets/img/gym2.jpg");
+        linear-gradient(
+            120deg,
+            rgba(46, 26, 71, 0.88),
+            rgba(20, 10, 35, 0.88)
+        ),
+        url("../assets/img/gym2.jpg");
 
-    background-size:cover;
+    background-size: cover;
+    background-position: center;
 
-    background-position:center;
+    color: white;
 
-    color:white;
+    position: relative;
+
+    /* 🔥 SOLO CAMBIO: CENTRADO */
+    justify-content: center;
+    text-align: center;
 }
 
-.hero-content{
-    width:100%;
+.hero-content {
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
 
-    max-width:1200px;
+    /* 🔥 CENTRADO REAL DEL CONTENIDO */
+    display: flex;
+    justify-content: center;
 }
 
-.hero-text{
-    max-width:650px;
+.hero-text {
+    max-width: 650px;
 }
 
-.hero-text h1{
-    font-size:65px;
-
-    line-height:1.1;
-
-    margin-bottom:25px;
+.hero-text h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 20px;
 }
 
-.hero-text p{
-    font-size:20px;
-
-    line-height:1.7;
-
-    margin-bottom:35px;
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-bottom: 30px;
 }
 
-.btn-hero{
-    background:#F2B705;
+.btn-hero {
+    background: #F2B705;
+    color: #2E1A47;
 
-    color:#2E1A47;
+    padding: 14px 28px;
+    border-radius: 12px;
 
-    text-decoration:none;
+    font-weight: bold;
+    text-decoration: none;
 
-    padding:16px 32px;
+    display: inline-block;
 
-    border-radius:10px;
+    transition: 0.3s;
+}
 
-    font-weight:bold;
-
-    display:inline-block;
+.btn-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(242, 183, 5, 0.25);
 }
 
 /* =========================
    BENEFICIOS
 ========================= */
 
-.beneficios{
-    padding:90px 60px;
-
-    text-align:center;
+.beneficios {
+    padding: 100px 8%;
+    text-align: center;
 }
 
-.beneficios h2{
-    font-size:42px;
-
-    color:#2E1A47;
-
-    margin-bottom:50px;
+.beneficios h2 {
+    font-size: 40px;
+    color: #2E1A47;
+    margin-bottom: 50px;
 }
 
-.cards{
-    display:flex;
-
-    justify-content:center;
-
-    gap:30px;
-
-    flex-wrap:wrap;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
 }
 
-.card{
-    background:white;
-
-    width:320px;
-
-    padding:30px;
-
-    border-radius:20px;
-
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+.card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    padding-bottom: 20px;
 }
 
-.card img{
-    width:100%;
-
-    height:200px;
-
-    object-fit:cover;
-
-    border-radius:15px;
-
-    margin-bottom:20px;
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.card h3{
-    margin-bottom:15px;
+.card h3 {
+    margin: 15px 0 10px;
+    color: #2E1A47;
+}
 
-    color:#2E1A47;
+.card p {
+    font-size: 14px;
+    color: #555;
+    padding: 0 15px;
 }
 
 /* =========================
    PLANES
 ========================= */
 
-.planes{
-    background:#2E1A47;
+.planes {
+    background: #2E1A47;
+    color: white;
 
-    color:white;
-
-    padding:90px 60px;
-
-    text-align:center;
+    padding: 100px 8%;
+    text-align: center;
 }
 
-.planes h2{
-    font-size:42px;
-
-    margin-bottom:50px;
+.planes h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
 }
 
-.card-plan{
-    background:white;
-
-    color:#222;
-
-    width:320px;
-
-    padding:35px;
-
-    border-radius:20px;
+.grid-planes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
 }
 
-.card-plan h3{
-    color:#2E1A47;
+.card-plan {
+    background: white;
+    color: #222;
 
-    margin-bottom:15px;
+    border-radius: 20px;
+
+    padding: 35px;
+
+    transition: 0.3s;
 }
 
-.card-plan h4{
-    color:#F2B705;
-
-    font-size:38px;
-
-    margin-bottom:20px;
+.card-plan:hover {
+    transform: translateY(-10px);
 }
 
-.card-plan ul{
-    list-style:none;
-
-    margin-bottom:25px;
+.card-plan h3 {
+    color: #2E1A47;
 }
 
-.card-plan li{
-    margin-bottom:12px;
+.card-plan h4 {
+    color: #F2B705;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.card-plan button{
-    background:#F2B705;
-
-    border:none;
-
-    padding:12px 20px;
-
-    border-radius:10px;
-
-    font-weight:bold;
-
-    cursor:pointer;
+.card-plan ul {
+    list-style: none;
+    margin-bottom: 25px;
 }
 
-.destacado{
-    transform:scale(1.05);
+.card-plan li {
+    margin-bottom: 10px;
+    color: #444;
 }
 
-/* SOBRE NOSOTROS */
+.card-plan button {
+    background: #F2B705;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-.sobre{
+/* =========================
+   SOBRE NOSOTROS
+========================= */
 
-    padding:90px 60px;
-
-    text-align:center;
+.sobre {
+    padding: 100px 8%;
+    text-align: center;
 
     background:
-    linear-gradient(
-        rgba(30, 30, 30, 0.75),
-        rgba(0, 0, 0, 0.75)
-    ),
-    url("../assets/img/gym3.jpg");
+        linear-gradient(
+            rgba(10, 10, 10, 0.75),
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("../assets/img/gym3.jpg");
 
-    background-size:cover;
-
-    background-position:center;
-}
-.sobre h2{
-    font-size:42px;
-
-    color:#ffffff;
-
-    margin-bottom:30px;
-}
-
-.sobre p{
-    color:white;
-    max-width:850px;
-
-    margin:auto;
-
-    line-height:1.7;
-    
-}
-
-.info-sobre{
+    background-size: cover;
+    background-position: center;
 
     color: white;
-    display:flex;
-
-    justify-content:center;
-
-    gap:30px;
-
-    margin-top:50px;
-
-    flex-wrap:wrap;
 }
 
-.box{
-    background:rgb(25, 25, 25);
-
-    width:350px;
-
-    padding:30px;
-
-    border-radius:20px;
-
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+.sobre h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
-/* FOOTER*/
+.sobre p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.info-sobre {
+    margin-top: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.box {
+    background: rgba(255,255,255,0.06);
+    padding: 30px;
+    border-radius: 18px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#111;
@@ -372,4 +359,27 @@ footer h3{
     margin-top:20px;
 
     font-size:14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .beneficios,
+    .planes,
+    .sobre {
+        padding: 70px 20px;
+    }
 }

@@ -1,48 +1,200 @@
-# Documentación de Uso de IA
-
-## Herramienta utilizada
+DOCUMENTACIÓN DE USO DE IA
+PROYECTO WEB “SPORTCLUB”
+BENJAMIN TABILO
+------------------------------------------------------------
+HERRAMIENTA UTILIZADA
 ChatGPT
 
-## Fecha
-13/05/2026
+FECHA
+Junio 2026
 
-## Prompt:
+------------------------------------------------------------
+1. INTRODUCCIÓN
+------------------------------------------------------------
 
-"Explicacion de como crear una página de login, de una forma entendible utilizando HTML5 y CSS3 con diseño moderno, estructura semántica, formulario de inicio de sesión, inputs estilizados, botón de ingresar y links de recuperación de contraseña y registro."
+Durante el desarrollo del proyecto SportClub se utilizó
+inteligencia artificial únicamente como herramienta de
+apoyo para resolver dudas técnicas, comprender conceptos
+de programación y corregir algunos errores durante el
+desarrollo.
 
-## Resultado generado
+El proyecto NO fue generado automáticamente por IA.
 
-La herramienta generó una explicacion paso a paso y una ayuda en la base inicial del login utilizando HTML y CSS, incluyendo la estructura del formulario, estilos visuales y organización de carpetas.
+La estructura principal del sitio, el diseño visual,
+la organización de carpetas, la personalización de estilos,
+las modificaciones del código y gran parte del desarrollo
+fueron realizados manualmente por el estudiante.
 
-## Modificaciones realizadas
-
-- Se crea un archivo Login.html.
-- Se crea un CSS para el Login.html
-- Se agregaron clases CSS personalizadas.
-- Se modificaron colores y estilos para mejorar el contraste visual.
-- Se incorporó el logo oficial del proyecto.
-- Se ajustaron tamaños, espaciados y efectos visuales.
-- Se incorporó el logo del proyecto.
-
-
-## Justificación
-
-La Inteligencia Artificial fue utilizada principalmente como apoyo para guiar el desarrollo del trabajo y ayudar a comprender mejor cómo construir la página paso a paso.
-
-También sirvió para entender:
-
-- Cómo estructurar correctamente un proyecto Front End.
-- Cómo funciona un formulario login en HTML5.
-- Cómo aplicar estilos en CSS3.
-- Cómo organizar el código de manera más profesional.
-- Cómo utilizar clases, inputs, botones y enlaces.
-
-El contenido generado ayudó a comprender la función de cada parte del código y cómo implementarla correctamente dentro del proyecto.
-
-Todo el código fue revisado, entendido y adaptado manualmente antes de ser utilizado.
+La IA fue utilizada principalmente como guía educativa y
+apoyo complementario durante el proceso de aprendizaje.
 
 
-## Observación
+------------------------------------------------------------
+2. OBJETIVO DEL USO DE IA
+------------------------------------------------------------
 
-La IA fue utilizada como una herramienta de apoyo para el aprendizaje y desarrollo del proyecto, permitiendo entender mejor el funcionamiento y la implementación de cada componente utilizado.
+La inteligencia artificial fue utilizada con los siguientes
+objetivos:
 
+- Resolver errores de programación.
+- Comprender funciones de JavaScript.
+- Aprender técnicas de CSS.
+- Mejorar el diseño responsive.
+- Recibir orientación paso a paso.
+- Comprender mejor la relación entre HTML, CSS y JS.
+
+Todo el contenido sugerido por IA fue revisado,
+comprendido y posteriormente adaptado manualmente según
+las necesidades reales del proyecto.
+
+
+------------------------------------------------------------
+3. USO DE IA EN CSS
+------------------------------------------------------------
+
+La IA fue utilizada como apoyo para comprender:
+
+- Uso de Flexbox.
+- Transparencias.
+- Efectos hover.
+- Diseño responsive.
+- Organización visual de tarjetas y paneles.
+
+Ejemplo trabajado:
+
+header{
+    background: #2E1A47;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+}
+
+Explicación comprendida:
+
+display: flex
+→ Permite ordenar elementos horizontalmente.
+
+justify-content: space-between
+→ Separa los elementos dentro del contenedor.
+
+align-items: center
+→ Centra verticalmente el contenido.
+
+padding
+→ Agrega espacio interno.
+
+Posteriormente el código fue modificado manualmente para
+adaptarlo al diseño personalizado del proyecto SportClub.
+
+
+------------------------------------------------------------
+4. USO DE IA EN JAVASCRIPT
+------------------------------------------------------------
+
+La IA ayudó a comprender conceptos básicos de JavaScript,
+principalmente relacionados con eventos y conexión de
+archivos JS al proyecto.
+
+Código trabajado:
+
+const botones = document.querySelectorAll(".clase-card button");
+
+botones.forEach(boton => {
+
+    boton.addEventListener("click", () => {
+
+        alert("Clase reservada correctamente");
+
+    });
+
+});
+
+Explicación comprendida:
+
+- Detecta botones dentro de ".clase-card".
+- Recorre cada botón encontrado.
+- Agrega un evento click.
+- Ejecuta una acción al presionar el botón.
+
+Después de comprender el funcionamiento, el código fue
+modificado manualmente para dejar únicamente el botón
+“Reservar” con funcionalidad activa.
+
+
+------------------------------------------------------------
+5. TRABAJO REALIZADO PERSONALMENTE
+------------------------------------------------------------
+
+Las siguientes tareas fueron desarrolladas directamente
+por el estudiante:
+
+- Creación manual de páginas HTML.
+- Organización completa del proyecto y carpetas.
+- Diseño visual del sitio.
+- Personalización de colores y estilos.
+- Integración de imágenes.
+- Adaptación responsive.
+- Corrección manual de errores.
+- Modificación y personalización del código.
+- Decisiones de estructura y diseño general.
+
+La IA no tomó decisiones de diseño ni desarrolló el
+proyecto de manera automática.
+
+
+------------------------------------------------------------
+6. USO CORRECTO DE IA
+------------------------------------------------------------
+
+El uso de IA en este proyecto siguió las recomendaciones
+establecidas en la guía de desarrollo Front End:
+
+- No se copió código sin comprenderlo.
+- El código fue revisado y modificado manualmente.
+- Se realizaron cambios propios en diseño y estructura.
+- El uso de IA fue documentado correctamente.
+- La IA fue utilizada como apoyo y no como reemplazo del
+  trabajo del estudiante.
+
+
+------------------------------------------------------------
+7. APRENDIZAJES OBTENIDOS
+------------------------------------------------------------
+
+Gracias al apoyo de IA y al trabajo práctico realizado
+durante el proyecto se logró aprender:
+
+- Relación entre HTML, CSS y JavaScript.
+- Uso de Flexbox.
+- Eventos en JavaScript.
+- Diseño responsive.
+- Organización de proyectos web.
+- Corrección de errores.
+- Mejora visual de interfaces web.
+
+El proyecto permitió fortalecer conocimientos mediante
+práctica, análisis y modificación manual del código.
+
+
+------------------------------------------------------------
+8. CONCLUSIÓN
+------------------------------------------------------------
+
+El proyecto SportClub fue desarrollado principalmente de
+forma personal por el estudiante.
+
+La inteligencia artificial fue utilizada únicamente como
+herramienta de apoyo educativo para comprender conceptos,
+resolver dudas y recibir orientación durante algunas etapas
+del desarrollo.
+
+La construcción del sitio, personalización visual,
+adaptación del código y toma de decisiones finales fueron
+realizadas manualmente por el autor del proyecto.
+
+La IA funcionó como apoyo complementario durante el
+aprendizaje, pero no reemplazó el trabajo realizado por el
+estudiante.
