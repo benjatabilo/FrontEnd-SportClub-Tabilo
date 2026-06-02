@@ -8,9 +8,7 @@
     box-sizing: border-box;
 }
 
-/* =========================
-   BODY
-========================= */
+/* BODY*/
 
 body{
     font-family: Arial, sans-serif;
@@ -18,12 +16,10 @@ body{
     min-height: 100vh;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
-    background: #1a1a1a; /* negro suave, no puro */
+    background: #1a1a1a; 
 
     display: flex;
     justify-content: space-between;
@@ -95,7 +91,7 @@ nav a:hover {
 }
 
 
-/* LOGIN */
+/* boton login */
 
 .login-container{
     display: flex;
@@ -129,19 +125,19 @@ nav a:hover {
     margin: 0 auto 20px;
 }
 
-/* TITULO */
+/* TITULO: iniciar sesion */
 
 h1{
     text-align: center;
+
+    font-size: 23px;
 
     margin-bottom: 30px;
 
     color: #2E1A47;
 }
 
-/* =========================
-   FORM
-========================= */
+/* Formulario correo y clave */
 
 form{
     display: flex;
@@ -168,7 +164,7 @@ input:focus{
     border-color: #F2B705;
 }
 
-/* BOTON */
+/* BOTON: Iniciar sesion */
 
 button{
     padding: 14px;
@@ -179,7 +175,7 @@ button{
 
     background-color: #F2B705;
 
-    color: white;
+    color: rgb(0, 0, 0);
 
     font-size: 16px;
 
@@ -188,9 +184,7 @@ button{
     cursor: pointer;
 }
 
-/* =========================
-   LINKS
-========================= */
+/* LINKS */
 
 .links{
     margin-top: 20px;
@@ -208,12 +202,10 @@ button{
 
     color: #2E1A47;
 
-    font-size: 14px;
+    font-size: 15px;
 }
 
-/* =========================
-   ACCESOS
-========================= */
+/* Accesos directos */
 
 .accesos{
     margin-top: 30px;
@@ -272,6 +264,7 @@ button{
     }
 }
 
+/*PIE DE PAGINA*/
 footer{
     background:#111;
 

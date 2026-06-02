@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-========================= */
+/* RESET */
 
 * {
     margin: 0;
@@ -9,9 +7,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* =========================
-   BODY
-========================= */
+/* Body */
 
 body {
     background: #f4f4f7;
@@ -19,9 +15,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* Header */
 
 header {
     background: #1a1a1a;
@@ -46,9 +40,7 @@ header {
     width: 150px;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* Barra de navegacion */
 
 nav {
     display: flex;
@@ -87,9 +79,7 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* =========================
-   HERO (CENTRADO SOLO AJUSTADO)
-========================= */
+/* Hero */
 
 .hero {
     min-height: 92vh;
@@ -113,7 +103,7 @@ nav a:hover {
 
     position: relative;
 
-    /* 🔥 SOLO CAMBIO: CENTRADO */
+    /* Ajuste de: CENTRADO */
     justify-content: center;
     text-align: center;
 }
@@ -123,7 +113,7 @@ nav a:hover {
     max-width: 1100px;
     position: relative;
 
-    /* 🔥 CENTRADO REAL DEL CONTENIDO */
+    /* Ajuste de: Centrado */
     display: flex;
     justify-content: center;
 }
@@ -165,9 +155,7 @@ nav a:hover {
     box-shadow: 0 10px 25px rgba(242, 183, 5, 0.25);
 }
 
-/* =========================
-   BENEFICIOS
-========================= */
+/* Seccion beneficios */
 
 .beneficios {
     padding: 100px 8%;
@@ -211,9 +199,7 @@ nav a:hover {
     padding: 0 15px;
 }
 
-/* =========================
-   PLANES
-========================= */
+/* Secciones planes */
 
 .planes {
     background: #2E1A47;
@@ -278,14 +264,13 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* =========================
-   SOBRE NOSOTROS
-========================= */
+/* SECCION SOBRE NOSOTROS */
 
 .sobre {
     padding: 100px 8%;
     text-align: center;
-
+   
+/*Fondo con imagen y degrado por encima*/
     background:
         linear-gradient(
             rgba(10, 10, 10, 0.75),
@@ -325,9 +310,7 @@ nav a:hover {
     border-radius: 18px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* Pie de pagina */
 
 footer{
     background:#111;

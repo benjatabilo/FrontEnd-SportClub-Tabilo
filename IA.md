@@ -6,7 +6,7 @@ HERRAMIENTA UTILIZADA
 ChatGPT
 
 FECHA
-Junio 2026
+01 Junio 2026
 
 ------------------------------------------------------------
 1. INTRODUCCIÓN
@@ -23,7 +23,7 @@ El proyecto NO fue generado automáticamente por IA.
 La estructura principal del sitio, el diseño visual,
 la organización de carpetas, la personalización de estilos,
 las modificaciones del código y gran parte del desarrollo
-fueron realizados manualmente por el estudiante.
+fueron realizados manualmente.
 
 La IA fue utilizada principalmente como guía educativa y
 apoyo complementario durante el proceso de aprendizaje.
@@ -128,8 +128,7 @@ modificado manualmente para dejar únicamente el botón
 5. TRABAJO REALIZADO PERSONALMENTE
 ------------------------------------------------------------
 
-Las siguientes tareas fueron desarrolladas directamente
-por el estudiante:
+Las siguientes tareas fueron desarrolladas directamente:
 
 - Creación manual de páginas HTML.
 - Organización completa del proyecto y carpetas.
@@ -141,10 +140,6 @@ por el estudiante:
 - Modificación y personalización del código.
 - Decisiones de estructura y diseño general.
 
-La IA no tomó decisiones de diseño ni desarrolló el
-proyecto de manera automática.
-
-
 ------------------------------------------------------------
 6. USO CORRECTO DE IA
 ------------------------------------------------------------
@@ -152,7 +147,6 @@ proyecto de manera automática.
 El uso de IA en este proyecto siguió las recomendaciones
 establecidas en la guía de desarrollo Front End:
 
-- No se copió código sin comprenderlo.
 - El código fue revisado y modificado manualmente.
 - Se realizaron cambios propios en diseño y estructura.
 - El uso de IA fue documentado correctamente.
@@ -168,10 +162,8 @@ Gracias al apoyo de IA y al trabajo práctico realizado
 durante el proyecto se logró aprender:
 
 - Relación entre HTML, CSS y JavaScript.
-- Uso de Flexbox.
 - Eventos en JavaScript.
 - Diseño responsive.
-- Organización de proyectos web.
 - Corrección de errores.
 - Mejora visual de interfaces web.
 
@@ -184,7 +176,7 @@ práctica, análisis y modificación manual del código.
 ------------------------------------------------------------
 
 El proyecto SportClub fue desarrollado principalmente de
-forma personal por el estudiante.
+forma personal.
 
 La inteligencia artificial fue utilizada únicamente como
 herramienta de apoyo educativo para comprender conceptos,
@@ -196,5 +188,4 @@ adaptación del código y toma de decisiones finales fueron
 realizadas manualmente por el autor del proyecto.
 
 La IA funcionó como apoyo complementario durante el
-aprendizaje, pero no reemplazó el trabajo realizado por el
-estudiante.
+aprendizaje, pero no reemplazó el trabajo realizado por mi.

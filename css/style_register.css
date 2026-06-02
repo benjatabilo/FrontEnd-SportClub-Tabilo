@@ -122,6 +122,8 @@ nav a:hover {
 h1{
     text-align:center;
 
+    font-size: 23px;
+
     margin-bottom:30px;
 
     color:#2E1A47;
@@ -177,11 +179,11 @@ textarea{
     height:100px;
 }
 
-/* BOTON */
+/* Boton registrar*/
 
 button{
     background:#F2B705;
-    color:white;
+    color:rgb(0, 0, 0);
 
     border:none;
 
@@ -211,18 +213,19 @@ button{
 
 .mensaje-exito{
     background:#dcfce7;
+    font-size: 14px;
 
     color:#166534;
 
     border:1px solid #86efac;
 
-    padding:14px;
+    padding:8px;
 
-    border-radius:12px;
+    border-radius:9px;
 
     text-align:center;
 
-    font-weight:bold;
+    font-weight:normal;
 
     margin-bottom:20px;
 }
@@ -235,16 +238,17 @@ button{
     margin-top:25px;
 
     color:#2E1A47;
+
 }
 
 .login-link a{
     color:#F2B705;
 
     text-decoration:none;
-
     font-weight:bold;
 }
 
+/*Pie de pagina*/
 footer{
     background:#111;
 

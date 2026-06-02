@@ -14,12 +14,10 @@ body{
     min-height: 100vh;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
-    background: #1a1a1a; /* negro suave, no puro */
+    background: #1a1a1a; 
 
     display: flex;
     justify-content: space-between;
@@ -43,9 +41,7 @@ header {
     width: 150px;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* Barra de navegacion */
 
 nav{
     display: flex;

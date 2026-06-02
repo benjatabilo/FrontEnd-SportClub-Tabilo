@@ -81,9 +81,9 @@ IA.md
 
 Cada dashboard utiliza una identidad visual distinta:
 
-- Usuario → Azul
-- Coach → Verde
-- Administrador → Morado.
+- Usuario : Azul
+- Coach : Verde
+- Administrador : Morado.
 
 Esto permite identificar rápidamente el tipo de perfil dentro del sistema.
 
@@ -116,17 +116,13 @@ Las modificaciones finales y adaptación del código fueron realizadas manualmen
 
 1. Clonar el repositorio:
 
-```bash
-git clone LINK_DEL_REPOSITORIO
-```
+https://github.com/benjatabilo/FrontEnd-SportClub-Tabilo
 
 2. Abrir el proyecto en Visual Studio Code.
 
 3. Ejecutar el archivo:
 
-```plaintext
 index.html
-```
 
 ---
 
@@ -136,9 +132,7 @@ Proyecto publicado mediante GitHub Pages.
 
 Link del sitio:
 
-```plaintext
-PEGA_AQUI_TU_LINK_DE_GITHUB_PAGES
-```
+
 
 ---
 
