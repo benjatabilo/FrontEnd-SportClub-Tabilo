@@ -52,16 +52,18 @@
             <h1>Iniciar Sesión</h1>
 
             <!-- FORM -->
-            <form action="./dashboard_usuario.html">
+            <form id="loginForm">
 
                 <input
                     type="email"
+                    id="email"
                     placeholder="Correo electrónico"
                     required
                 >
 
                 <input
                     type="password"
+                    id="password"
                     placeholder="Contraseña"
                     required
                 >
@@ -69,6 +71,8 @@
                 <button type="submit">
                     Ingresar
                 </button>
+
+                <p id="loginMessage"></p>
 
             </form>
 
@@ -131,6 +135,8 @@
         </p>
 
     </footer>
+    
+    <script src="../js/login.js"></script>
 
 </body>
 

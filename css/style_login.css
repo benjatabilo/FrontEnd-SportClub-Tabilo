@@ -296,3 +296,25 @@ footer h3{
 
     font-size:14px;
 }
+
+/*AJUSTES DE MENSAJES JS*/
+#loginMessage{
+    display: none;
+
+    margin-top: 15px;
+    font-size: 14px;
+
+    padding: 8px;
+
+    border-radius: 9px;
+
+    background-color: #fee2e2;
+
+    color: #b91c1c;
+
+    font-weight: normal;
+
+    text-align: center;
+
+    border: 1px solid #fca5a5;
+}
