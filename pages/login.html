@@ -10,19 +10,14 @@
     <link rel="stylesheet" href="../css/style_login.css">
 </head>
 
-
 <body>
-
-    <!-- ENCABEZADO -->
 
     <header>
 
-        <!-- LOGO DE BARRA DE NAVEGACION-->
         <div class="logo-header">
             <img src="../assets/img/logo.png" alt="Logo SportClub">
         </div>
 
-        <!-- BARRA DE NAVEGACION -->
         <nav>
             <a href="../index.html">Inicio</a>
             <a href="../index.html#beneficios">Beneficios</a>
@@ -36,13 +31,10 @@
 
     </header>
 
-    <!-- LOGIN -->
-
     <main class="login-container">
 
         <section class="card">
 
-            <!-- LOGO -->
             <img 
                 src="../assets/img/logo.png" 
                 alt="Logo SportClub"
@@ -51,7 +43,6 @@
 
             <h1>Iniciar Sesión</h1>
 
-            <!-- FORM -->
             <form id="loginForm">
 
                 <input
@@ -60,6 +51,7 @@
                     placeholder="Correo electrónico"
                     required
                 >
+                <span id="emailError" style="color: #b91c1c; font-size: 13px; margin-top: -12px; margin-bottom: 12px; display: none; font-weight: bold; text-align: left; padding-left: 5px;"></span>
 
                 <input
                     type="password"
@@ -67,6 +59,7 @@
                     placeholder="Contraseña"
                     required
                 >
+                <span id="passwordError" style="color: #b91c1c; font-size: 13px; margin-top: -12px; margin-bottom: 12px; display: none; font-weight: bold; text-align: left; padding-left: 5px;"></span>
 
                 <button type="submit">
                     Ingresar
@@ -76,7 +69,6 @@
 
             </form>
 
-            <!-- LINKS -->
             <div class="links">
 
                 <a href="./recuperar.html">
@@ -89,7 +81,6 @@
 
             </div>
 
-            <!-- ACCESOS -->
             <div class="accesos">
 
                 <p>Accesos rápidos</p>
