@@ -5,209 +5,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Administrador - SportClub</title>
-
     <link rel="stylesheet" href="../css/dashboard_admin.css">
+    <style>
+        /* Estilos integrados para el formulario incrustado tipo tarjeta (Imagen de referencia) */
+        .embedded-form-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e5e7eb;
+        }
+        .form-header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #f3f4f6;
+            padding-bottom: 10px;
+        }
+        .form-header-flex h3 {
+            margin: 0;
+            color: #2E1A47;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-close-inline {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #9ca3af;
+        }
+        .btn-close-inline:hover {
+            color: #374151;
+        }
+        .form-grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+            text-align: left;
+            color: #4b5563;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        /* Estilos obligatorios de la rúbrica para validaciones visuales */
+        .error-msg { color: #b91c1c; font-size: 12px; margin-top: 4px; display: none; font-weight: bold; text-align: left; }
+        .input-error { border: 2px solid #b91c1c !important; background-color: #fef2f2 !important; }
+        .form-actions-flex { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+        .form-actions-flex button { padding: 10px 20px; border-radius: 6px; border: none; font-weight: bold; cursor: pointer; }
+    </style>
 </head>
 
 <body>
 
     <div class="dashboard-container">
 
-        <!-- SIDEBAR -->
         <aside class="sidebar">
-
             <div class="logo-section">
                 <img src="../assets/img/logo.png" alt="Logo SportClub" class="logo">
             </div>
-
             <nav class="menu">
-
                 <a href="#" class="active">Usuarios</a>
-
                 <a href="#">Reportes</a>
-
                 <a href="#">Configuración</a>
-
                 <a href="#">Clases</a>
-
             </nav>
-
         </aside>
 
-        <!-- MAIN -->
         <main class="main-content">
 
-            <!-- HEADER -->
             <header class="topbar">
-
                 <h1>Panel Administrador</h1>
-
                 <div class="topbar-buttons">
-
                     <a href="#">Mi Perfil</a>
-
-                    <a href="../index.html">Cerrar Sesión</a>
-
+                    <a href="#" id="logoutBtn">Cerrar Sesión</a>
                 </div>
-
             </header>
 
-            <!-- CARDS -->
             <section class="stats-cards">
-
                 <div class="card">
                     <h3>Total Usuarios</h3>
-                    <p>248</p>
+                    <p id="totalUsuariosCount">0</p>
                 </div>
-
                 <div class="card">
                     <h3>Total Coaches</h3>
-                    <p>15</p>
+                    <p id="totalCoachesCount">0</p>
                 </div>
-
                 <div class="card">
                     <h3>Total Clases</h3>
                     <p>32</p>
                 </div>
-
             </section>
 
-            <!-- TABLA -->
             <section class="table-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2>Usuarios Registrados</h2>
+                    <button id="btnAbrirCrear" style="background-color: #F2B705; color: black; border: none; padding: 10px 15px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+                        + Agregar Nuevo Usuario
+                    </button>
+                </div>
 
-                <h2>Usuarios Registrados</h2>
+                <div id="feedbackNotification" style="display: none; margin: 15px 0; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center;"></div>
 
                 <table>
-
                     <thead>
                         <tr>
-                            <th>Rut</th>
+                            <th>ID</th>
                             <th>Nombre Completo</th>
-                            <th>Rol</th>
-                            <th>Estado</th>
+                            <th>Correo Electrónico</th>
+                            <th>Rol asignado</th>
                             <th>Fecha Registro</th>
+                            <th style="text-align: center;">Acciones</th>
                         </tr>
                     </thead>
-
-                    <tbody>
-
-                        <tr>
-                            <td>18.452.785-2</td>
-                            <td>Javier Torres</td>
-                            <td>Usuario</td>
-                            <td>Activo</td>
-                            <td>12/05/2026</td>
-                        </tr>
-
-                        <tr>
-                            <td>20.145.774-9</td>
-                            <td>Camila Soto</td>
-                            <td>Coach</td>
-                            <td>Activo</td>
-                            <td>03/02/2026</td>
-                        </tr>
-
-                        <tr>
-                            <td>17.985.112-1</td>
-                            <td>Diego Fuentes</td>
-                            <td>Administrador</td>
-                            <td>Activo</td>
-                            <td>21/01/2026</td>
-                        </tr>
-
-                        <tr>
-                            <td>19.745.631-8</td>
-                            <td>Valentina Rojas</td>
-                            <td>Usuario</td>
-                            <td>Inactivo</td>
-                            <td>08/03/2026</td>
-                        </tr>
-
-                        <tr>
-                            <td>21.547.884-0</td>
-                            <td>Martín López</td>
-                            <td>Coach</td>
-                            <td>Activo</td>
-                            <td>17/04/2026</td>
-                        </tr>
-
-                    </tbody>
-
+                    <tbody id="usuariosTableBody">
+                        </tbody>
                 </table>
-
             </section>
 
-            <!-- REPORTES -->
-            <section class="reports-section">
-
-                <h2>Reportes del Sistema</h2>
-
-                <div class="reports-grid">
-
-                    <div class="report-card">
-                        <h3>Clase Más Solicitada</h3>
-                        <p>Crossfit</p>
-                    </div>
-
-                    <div class="report-card">
-                        <h3>Usuarios Activos</h3>
-                        <p>198</p>
-                    </div>
-
-                    <div class="report-card">
-                        <h3>Reservas del Día</h3>
-                        <p>76</p>
-                    </div>
-
+            <section id="containerFormularioUsuario" class="embedded-form-card" style="display: none;">
+                <div class="form-header-flex">
+                    <h3 id="formTitle"><span style="font-size: 18px;">👤</span> Nuevo Usuario</h3>
+                    <button type="button" id="btnCerrarCruz" class="btn-close-inline">×</button>
                 </div>
+                
+                <form id="userForm" novalidate>
+                    <input type="hidden" id="userId">
+                    
+                    <div class="form-grid-layout">
+                        <div class="form-group">
+                            <label for="userFullName">Nombre Completo *</label>
+                            <input type="text" id="userFullName" placeholder="Ej: Juan Pérez">
+                            <div class="error-msg" id="errName">El nombre completo es obligatorio.</div>
+                        </div>
 
-            </section>
+                        <div class="form-group" id="emailGroup">
+                            <label for="userEmail">Correo Electrónico *</label>
+                            <input type="email" id="userEmail" placeholder="Ej: juan@demo.cl">
+                            <div class="error-msg" id="errEmail">Email inválido o campo obligatorio.</div>
+                        </div>
 
-            <!-- CONFIGURACION -->
-            <section class="config-section">
+                        <div class="form-group">
+                            <label for="userRole">Rol Asignado *</label>
+                            <select id="userRole">
+                                <option value="user">user</option>
+                                <option value="coach">coach</option>
+                                <option value="admin">admin</option>
+                            </select>
+                        </div>
+                    </div>
 
-                <h2>Configuración Rápida</h2>
+                    <div class="form-grid-layout" id="passwordGroup">
+                        <div class="form-group">
+                            <label for="userPassword">Contraseña *</label>
+                            <input type="password" id="userPassword" placeholder="Mínimo 8 caracteres">
+                            <div class="error-msg" id="errPassword">La contraseña debe tener mínimo 8 caracteres.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="userConfirmPassword">Confirmar Contraseña *</label>
+                            <input type="password" id="userConfirmPassword" placeholder="Repetir contraseña">
+                            <div class="error-msg" id="errConfirmPassword">Las contraseñas no coinciden.</div>
+                        </div>
+                    </div>
 
-                <div class="config-buttons">
-
-                    <button>Crear Usuario</button>
-
-                    <button>Editar Sistema</button>
-
-                    <button>Configuración</button>
-
-                </div>
-
+                    <div class="form-actions-flex">
+                        <button type="button" id="btnCancelarForm" style="background: #e5e7eb; color: #374151;">Cancelar</button>
+                        <button type="submit" style="background: #2E1A47; color: white;">Guardar</button>
+                    </div>
+                </form>
             </section>
 
         </main>
-
     </div>
 
     <footer>
-
         <h3>SportClub</h3>
-
-        <p>
-            Tu mejor version comienza hoy.
-        </p>
-
-        <div class="redes">
-
-            <a href="#">Instagram</a>
-
-            <a href="#">Facebook</a>
-
-            <a href="#">TikTok</a>
-
-        </div>
-
-        <p class="copy">
-            © 2026 SportClub - Todos los derechos reservados
-        </p>
-
+        <p>Tu mejor versión comienza hoy.</p>
+        <p class="copy">© 2026 SportClub - Todos los derechos reservados</p>
     </footer>
 
+    <script src="../js/dashboard_admin.js"></script>
 </body>
-
 </html>
