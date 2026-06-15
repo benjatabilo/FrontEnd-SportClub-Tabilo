@@ -2,101 +2,260 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Registro - SportClub</title>
-    <link rel="stylesheet" href="../css/style_register.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/style_register.css"
+    >
+
 </head>
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
+
         <div class="logo-nav">
-            <img src="../assets/img/logo.png" alt="Logo SportClub">
+
+            <img
+                src="../assets/img/logo.png"
+                alt="Logo SportClub"
+            >
+
         </div>
 
         <nav>
-            <a href="../index.html">Inicio</a>
-            <a href="../index.html#beneficios">Beneficios</a>
-            <a href="../index.html#planes">Planes</a>
-            <a href="../index.html#sobre">Nosotros</a>
-            <a href="./login.html" class="btn-login">Iniciar Sesion</a>
+
+            <a href="../index.html">
+                Inicio
+            </a>
+
+            <a href="../index.html#beneficios">
+                Beneficios
+            </a>
+
+            <a href="../index.html#planes">
+                Planes
+            </a>
+
+            <a href="../index.html#sobre">
+                Nosotros
+            </a>
+
+            <a
+                href="./login.html"
+                class="btn-login"
+            >
+                Iniciar Sesion
+            </a>
+
         </nav>
+
     </header>
+
+    <!-- CONTENEDOR -->
 
     <main class="contenedor">
 
         <section class="register-box">
 
-            <img src="../assets/img/logo.png" alt="Logo SportClub" class="logo">
+            <img
+                src="../assets/img/logo.png"
+                alt="Logo SportClub"
+                class="logo"
+            >
 
-            <h1>Crear Cuenta</h1>
+            <h1>
+                Crear Cuenta
+            </h1>
+
+            <!-- FORM -->
 
             <form id="registerForm">
 
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" placeholder="Ingrese su nombre completo" required>
-                <span id="error-nombre" class="mensaje-error" style="display:none;"></span>
+                <label for="nombre">
+                    Nombre completo
+                </label>
 
-                <label for="fechaNacimiento">Fecha de nacimiento (Opcional)</label>
-                <input type="date" id="fechaNacimiento">
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Ingrese su nombre completo"
+                    required
+                >
 
-                <label for="deporte">¿Practica deporte?</label>
+                <label for="fechaNacimiento">
+                    Fecha de nacimiento (Opcional)
+                </label>
+
+                <input
+                    type="date"
+                    id="fechaNacimiento"
+                >
+
+                <label for="deporte">
+                    ¿Practica deporte?
+                </label>
+
                 <select id="deporte">
-                    <option value="">Seleccione una opción</option>
-                    <option value="si">Sí</option>
-                    <option value="no">No</option>
+
+                    <option value="">
+                        Seleccione una opción
+                    </option>
+
+                    <option value="si">
+                        Sí
+                    </option>
+
+                    <option value="no">
+                        No
+                    </option>
+
                 </select>
 
-                <label for="actividad">Actividad de interés</label>
-                <input type="text" id="actividad" placeholder="Ej: Gym, Running, Fútbol">
+                <label for="actividad">
+                    Actividad de interés
+                </label>
 
-                <label for="objetivos">Información adicional</label>
-                <textarea id="objetivos" placeholder="Opcional"></textarea>
+                <input
+                    type="text"
+                    id="actividad"
+                    placeholder="Ej: Gym, Running, Fútbol"
+                >
 
-                <label for="correo">Correo electrónico</label>
-                <input type="email" id="correo" placeholder="Ingrese su correo" required>
-                <span id="error-correo" class="mensaje-error" style="display:none;"></span>
+                <label for="objetivos">
+                    Información adicional
+                </label>
 
-                <label for="password">Crear contraseña</label>
-                <input type="password" id="password" placeholder="Ingrese su contraseña" required>
-                <span id="error-password" class="mensaje-error" style="display:none;"></span>
+                <textarea
+                    id="objetivos"
+                    placeholder="Opcional"
+                ></textarea>
 
-                <label for="confirmPassword">Confirmar contraseña</label>
-                <input type="password" id="confirmPassword" placeholder="Repita su contraseña" required>
-                <span id="error-confirmPassword" class="mensaje-error" style="display:none;"></span>
+                <label for="correo">
+                    Correo electrónico
+                </label>
 
-                <p id="registerMessage" class="mensaje-error" style="display:none; margin-top: 0px; margin-bottom: 15px; text-align: center; font-weight: bold;"></p>
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="Ingrese su correo"
+                    required
+                >
 
-                <div class="mensaje-exito" style="display:none;">
+                <label for="password">
+                    Crear contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Ingrese su contraseña"
+                    required
+                >
+
+                <label for="confirmPassword">
+                    Confirmar contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Repita su contraseña"
+                    required
+                >
+
+                <!-- MENSAJES -->
+
+                <p
+                    id="registerMessage"
+                    class="mensaje-error"
+                    style="display:none;"
+                >
+                </p>
+
+                <div
+                    class="mensaje-exito"
+                    style="display:none;"
+                >
                     Usuario registrado correctamente.
                 </div>
 
-                <button type="submit">Registrarse</button>
+                <button type="submit">
+
+                    Registrarse
+
+                </button>
 
             </form>
 
             <p class="login-link">
+
                 ¿Ya tienes cuenta?
-                <a href="./login.html">Iniciar Sesión</a>
+
+                <a href="./login.html">
+
+                    Iniciar Sesión
+
+                </a>
+
             </p>
 
         </section>
 
     </main>
 
+    <!-- FOOTER -->
+
     <footer>
-        <h3>SportClub</h3>
-        <p>Tu mejor version comienza hoy.</p>
+
+        <h3>
+
+            SportClub
+
+        </h3>
+
+        <p>
+
+            Tu mejor version comienza hoy.
+
+        </p>
 
         <div class="redes">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">TikTok</a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                TikTok
+            </a>
+
         </div>
 
-        <p class="copy">© 2026 SportClub - Todos los derechos reservados</p>
+        <p class="copy">
+
+            © 2026 SportClub - Todos los derechos reservados
+
+        </p>
+
     </footer>
+
+    <!-- JS -->
 
     <script src="../js/register.js"></script>
 
