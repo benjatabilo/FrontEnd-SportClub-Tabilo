@@ -1,0 +1,64 @@
+/* --- Estilos Generales para Perfil --- */
+.perfil-container {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Tarjetas (Cards) para cumplir con el diseño profesional */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra para profundidad */
+    transition: transform 0.2s ease;
+}
+
+.card-header {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 1.5rem;
+}
+
+/* Tipografía y Espaciado */
+.h2, .h5 {
+    color: #2d3748;
+    font-weight: 700;
+}
+
+.text-muted {
+    color: #718096 !important;
+}
+
+/* Botones (Consistencia con tu CRUD) */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+}
+
+/* Validaciones Visuales (Rúbrica) */
+.form-control.is-invalid {
+    border-color: #dc3545 !important;
+    padding-right: calc(1.5em + 0.75rem);
+}
+
+.invalid-feedback {
+    display: none; /* Se activa mediante JS cuando hay error */
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* Ajuste de Avatar / Foto Placeholder */
+.rounded-circle {
+    background-color: #e2e8f0;
+    color: #718096;
+}
+
+/* Mejora de Inputs */
+.form-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+}

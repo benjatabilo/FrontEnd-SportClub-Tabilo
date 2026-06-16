@@ -169,9 +169,13 @@ function lanzarFeedbackNotificacion(msj) {
     setTimeout(() => { crudGlobalFeedback.style.display = "none"; }, 4000);
 }
 function formatearFecha(f) {
-    if (!f) return "14/06/2026";
+    // 1. Si el backend no envía nada, generamos la fecha actual dinámicamente
+    if (!f) return new Date().toLocaleDateString('es-CL');
+    
     const d = new Date(f);
-    return isNaN(d.getTime()) ? "14/06/2026" : d.toLocaleDateString('es-CL');
+    
+    // 2. Si la fecha que envió el backend es inválida, también usamos la fecha actual
+    return isNaN(d.getTime()) ? new Date().toLocaleDateString('es-CL') : d.toLocaleDateString('es-CL');
 }
 function actualizarCardsSuperiores(u) {
     totalUsuariosCount.textContent = u.length;
