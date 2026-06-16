@@ -385,21 +385,20 @@ function configurarBotonVolver() {
     
     if (btnVolver) {
         btnVolver.addEventListener('click', () => {
-            const userObj = JSON.parse(localStorage.getItem("user"));
-            const rolUsuario = userObj ? userObj.role : 'user';
+            const userObj = JSON.parse(localStorage.getItem("user") || "{}");
+            const rolUsuario = userObj.role || 'user';
             
-            // Usamos la ruta absoluta desde la raíz (/pages/...)
+            // Usamos rutas relativas (sin la barra inicial /)
             if (rolUsuario === 'admin') {
-                window.location.href = '/pages/dashboard_admin.html';
+                window.location.href = 'dashboard_admin.html';
             } else if (rolUsuario === 'coach') {
-                window.location.href = './pages/dashboard_coach.html';
+                window.location.href = 'dashboard_coach.html';
             } else {
-                window.location.href = '../pages/dashboard_usuario.html';
+                window.location.href = 'dashboard_usuario.html';
             }
         });
     }
 }
-
 
 // ==========================
 // PASSWORD
