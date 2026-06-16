@@ -53,6 +53,8 @@ loginForm.addEventListener("submit", async function (event) {
         localStorage.setItem("token", result.data.token);
         localStorage.setItem("user", JSON.stringify(result.data.user));
 
+        localStorage.setItem("role", result.data.user.role);
+
         // 4. Redirección según rol (Requerimiento de rúbrica) [cite: 60]
         const role = result.data.user.role;
         

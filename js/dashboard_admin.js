@@ -27,6 +27,17 @@ if (!token || !usuarioLogueado || usuarioLogueado.role !== "admin") {
 
 // --- Eventos ---
 document.addEventListener("DOMContentLoaded", () => {
+    const welcomeElement = document.createElement("p");
+    welcomeElement.style.cssText = "margin: 0; color: #555; font-size: 1rem; font-weight: bold;";
+    
+    // Obtenemos el nombre del objeto usuarioLogueado que ya tienes definido arriba
+    const nombreAdmin = usuarioLogueado ? usuarioLogueado.full_name : "Administrador";
+    welcomeElement.textContent = `Bienvenido/a, ${nombreAdmin}`;
+    
+    // Insertamos el mensaje justo después del H1 del header
+    const headerH1 = document.querySelector(".topbar h1");
+    headerH1.insertAdjacentElement('afterend', welcomeElement);
+    
     cargarUsuarios();
     crudForm.addEventListener("submit", procesarFormulario);
     document.getElementById("btnCancelarForm").addEventListener("click", resetearFormularioAModoCrear);

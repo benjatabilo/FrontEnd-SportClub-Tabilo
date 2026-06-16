@@ -1,64 +1,505 @@
-/* --- Estilos Generales para Perfil --- */
+/* ==========================
+RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F1F5F9;
+    font-family: Arial, sans-serif;
+    color: #2E1A47;
+}
+
+
+/* ==========================
+HEADER
+========================== */
+
+.perfil-header {
+
+    width: 1180px;
+
+    margin: 18px auto;
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 18px 26px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,.06);
+
+}
+
+.header-info h1 {
+
+    font-size: 18px;
+
+    margin-bottom: 4px;
+
+}
+
+.header-info p {
+
+    font-size: 14px;
+
+    color: #64748B;
+
+}
+
+#btnVolver {
+
+    height: 42px;
+
+    padding: 0 20px;
+
+    background: #2E1A47;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+#btnVolver:hover {
+
+    background: #F2B705;
+
+    color: #2E1A47;
+
+}
+
+
+/* ==========================
+CONTENEDOR
+========================== */
+
 .perfil-container {
-    max-width: 1200px;
-    margin: 20px auto;
+
+    width: 1180px;
+
+    margin: auto;
+
 }
 
-/* Tarjetas (Cards) para cumplir con el diseño profesional */
+.perfil-layout {
+
+    display: grid;
+
+    grid-template-columns: 290px 1fr;
+
+    gap: 18px;
+
+}
+
+
+/* ==========================
+CARDS
+========================== */
+
 .card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra para profundidad */
-    transition: transform 0.2s ease;
+
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+
+    margin-bottom: 18px;
+
 }
 
-.card-header {
-    border-bottom: 1px solid #f0f0f0;
-    padding: 1.5rem;
+
+/* ==========================
+SIDEBAR
+========================== */
+
+.perfil-card {
+
+    text-align: center;
+
 }
 
-/* Tipografía y Espaciado */
-.h2, .h5 {
-    color: #2d3748;
-    font-weight: 700;
+.perfil-avatar {
+
+    width: 120px;
+
+    height: 120px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2E1A47,
+        #4b2c68
+    );
+
 }
 
-.text-muted {
-    color: #718096 !important;
+#previewNombre {
+
+    margin-top: 14px;
+
+    font-size: 18px;
+
 }
 
-/* Botones (Consistencia con tu CRUD) */
+.perfil-card p {
+
+    color: #64748B;
+
+}
+
+.badge {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    font-size: 12px;
+
+}
+
+.bg-admin {
+
+    background: #DC2626;
+
+}
+
+.bg-coach {
+
+    background: #3498DB;
+
+}
+
+.bg-user {
+
+    background: #16A34A;
+
+}
+
+.perfil-data {
+
+    margin-top: 28px;
+
+}
+
+.perfil-data div {
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #EDF2F7;
+
+}
+
+.perfil-data label {
+
+    display: block;
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+
+}
+
+
+/* ==========================
+SECCIONES
+========================== */
+
+.section-header {
+
+    margin-bottom: 18px;
+
+    border-bottom: 1px solid #E5E7EB;
+
+    padding-bottom: 14px;
+
+}
+
+.section-header h2 {
+
+    font-size: 18px;
+
+}
+
+
+/* ==========================
+FORM
+========================== */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+}
+
+.password-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 18px;
+
+}
+
+.field {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.full {
+
+    grid-column: 1 / -1;
+
+}
+
+label {
+
+    margin-bottom: 6px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+.form-control {
+
+    height: 42px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+}
+
+.form-control:focus {
+
+    outline: none;
+
+    border-color: #F2B705;
+
+}
+
+textarea.form-control {
+
+    height: 90px;
+
+    resize: none;
+
+}
+
+
+/* ==========================
+PASSWORD
+========================== */
+
+.input-password {
+
+    display: grid;
+
+    grid-template-columns: 1fr 48px;
+
+    gap: 8px;
+
+}
+
+.toggle-password {
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #F8FAFC;
+
+    cursor: pointer;
+
+}
+
+
+/* ==========================
+VALIDACIONES
+========================== */
+
+.input-error {
+
+    border: 2px solid #DC2626 !important;
+
+}
+
+.error-msg {
+
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: #DC2626;
+
+    min-height: 14px;
+
+}
+
+
+/* ==========================
+BOTONES
+========================== */
+
+.actions {
+
+    margin-top: 18px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+}
+
+.btn {
+
+    height: 42px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+.btn-light {
+
+    background: #F1F5F9;
+
+}
+
 .btn-success {
-    background-color: #28a745;
-    border-color: #28a745;
+
+    background: #16A34A;
+
+    color: white;
+
 }
 
 .btn-primary {
-    background-color: #0d6efd;
+
+    background: #2E1A47;
+
+    color: white;
+
 }
 
-/* Validaciones Visuales (Rúbrica) */
-.form-control.is-invalid {
-    border-color: #dc3545 !important;
-    padding-right: calc(1.5em + 0.75rem);
+.btn-primary:hover {
+
+    background: #F2B705;
+
+    color: #2E1A47;
+
 }
 
-.invalid-feedback {
-    display: none; /* Se activa mediante JS cuando hay error */
-    color: #dc3545;
-    font-size: 0.85rem;
-    margin-top: 0.25rem;
+
+/* ==========================
+ALERTAS
+========================== */
+
+.alert {
+
+    margin-top: 14px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
 }
 
-/* Ajuste de Avatar / Foto Placeholder */
-.rounded-circle {
-    background-color: #e2e8f0;
-    color: #718096;
+.alert-success {
+
+    background: #DCFCE7;
+
 }
 
-/* Mejora de Inputs */
-.form-label {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.02rem;
+.d-none {
+
+    display: none;
+
+}
+
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:1200px){
+
+.perfil-header,
+.perfil-container{
+
+width:95%;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.perfil-layout{
+
+grid-template-columns:1fr;
+
+}
+
+.form-grid,
+.password-grid{
+
+grid-template-columns:1fr;
+
+}
+
 }
