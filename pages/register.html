@@ -2,69 +2,106 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Registro - SportClub</title>
 
-    <link rel="stylesheet" href="../css/style_register.css">
+    <link
+        rel="stylesheet"
+        href="../css/style_register.css"
+    >
+
 </head>
 
 <body>
 
     <!-- HEADER -->
+
     <header>
 
         <div class="logo-nav">
-            <img src="../assets/img/logo.png" alt="Logo SportClub">
+
+            <img
+                src="../assets/img/logo.png"
+                alt="Logo SportClub"
+            >
+
         </div>
 
         <nav>
-            <a href="../index.html">Inicio</a>
-            <a href="../index.html#beneficios">Beneficios</a>
-            <a href="../index.html#planes">Planes</a>
-            <a href="../index.html#sobre">Nosotros</a>
 
-            <a href="./login.html" class="btn-login">
+            <a href="../index.html">
+                Inicio
+            </a>
+
+            <a href="../index.html#beneficios">
+                Beneficios
+            </a>
+
+            <a href="../index.html#planes">
+                Planes
+            </a>
+
+            <a href="../index.html#sobre">
+                Nosotros
+            </a>
+
+            <a
+                href="./login.html"
+                class="btn-login"
+            >
                 Iniciar Sesion
             </a>
+
         </nav>
 
     </header>
 
     <!-- CONTENEDOR -->
+
     <main class="contenedor">
 
         <section class="register-box">
 
-            <img src="../assets/img/logo.png" alt="Logo SportClub" class="logo">
+            <img
+                src="../assets/img/logo.png"
+                alt="Logo SportClub"
+                class="logo"
+            >
 
-            <h1>Crear Cuenta</h1>
+            <h1>
+                Crear Cuenta
+            </h1>
 
-            <form action="./login.html">
+            <!-- FORM -->
 
-                <label for="nombre">Nombre completo</label>
+            <form id="registerForm">
 
-                <input 
-                    type="text" 
-                    id="nombre" 
+                <label for="nombre">
+                    Nombre completo
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
                     placeholder="Ingrese su nombre completo"
                     required
                 >
 
                 <label for="fechaNacimiento">
-                    Fecha de nacimiento
+                    Fecha de nacimiento (Opcional)
                 </label>
 
-                <input 
-                    type="date" 
+                <input
+                    type="date"
                     id="fechaNacimiento"
-                    required
                 >
-
-                <p class="mensaje-error">
-                    Debe ser mayor de 16 años.
-                </p>
 
                 <label for="deporte">
                     ¿Practica deporte?
@@ -72,15 +109,15 @@
 
                 <select id="deporte">
 
-                    <option>
+                    <option value="">
                         Seleccione una opción
                     </option>
 
-                    <option>
+                    <option value="si">
                         Sí
                     </option>
 
-                    <option>
+                    <option value="no">
                         No
                     </option>
 
@@ -90,9 +127,9 @@
                     Actividad de interés
                 </label>
 
-                <input 
-                    type="text" 
-                    id="actividad" 
+                <input
+                    type="text"
+                    id="actividad"
                     placeholder="Ej: Gym, Running, Fútbol"
                 >
 
@@ -100,7 +137,7 @@
                     Información adicional
                 </label>
 
-                <textarea 
+                <textarea
                     id="objetivos"
                     placeholder="Opcional"
                 ></textarea>
@@ -109,23 +146,19 @@
                     Correo electrónico
                 </label>
 
-                <input 
-                    type="email" 
-                    id="correo" 
+                <input
+                    type="email"
+                    id="correo"
                     placeholder="Ingrese su correo"
                     required
                 >
-
-                <p class="mensaje-error">
-                    Correo inválido.
-                </p>
 
                 <label for="password">
                     Crear contraseña
                 </label>
 
-                <input 
-                    type="password" 
+                <input
+                    type="password"
                     id="password"
                     placeholder="Ingrese su contraseña"
                     required
@@ -135,23 +168,33 @@
                     Confirmar contraseña
                 </label>
 
-                <input 
-                    type="password" 
+                <input
+                    type="password"
                     id="confirmPassword"
                     placeholder="Repita su contraseña"
                     required
                 >
 
-                <p class="mensaje-error">
-                    Las contraseñas no coinciden.
+                <!-- MENSAJES -->
+
+                <p
+                    id="registerMessage"
+                    class="mensaje-error"
+                    style="display:none;"
+                >
                 </p>
 
-                <div class="mensaje-exito">
+                <div
+                    class="mensaje-exito"
+                    style="display:none;"
+                >
                     Usuario registrado correctamente.
                 </div>
 
                 <button type="submit">
+
                     Registrarse
+
                 </button>
 
             </form>
@@ -161,7 +204,9 @@
                 ¿Ya tienes cuenta?
 
                 <a href="./login.html">
+
                     Iniciar Sesión
+
                 </a>
 
             </p>
@@ -170,29 +215,49 @@
 
     </main>
 
+    <!-- FOOTER -->
+
     <footer>
 
-        <h3>SportClub</h3>
+        <h3>
+
+            SportClub
+
+        </h3>
 
         <p>
+
             Tu mejor version comienza hoy.
+
         </p>
 
         <div class="redes">
 
-            <a href="#">Instagram</a>
+            <a href="#">
+                Instagram
+            </a>
 
-            <a href="#">Facebook</a>
+            <a href="#">
+                Facebook
+            </a>
 
-            <a href="#">TikTok</a>
+            <a href="#">
+                TikTok
+            </a>
 
         </div>
 
         <p class="copy">
+
             © 2026 SportClub - Todos los derechos reservados
+
         </p>
 
     </footer>
+
+    <!-- JS -->
+
+    <script src="../js/register.js"></script>
 
 </body>
 

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportClub | Mi Perfil</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body>
+
+    <header class="perfil-header">
+        <div class="header-info">
+            <h1>Mi Perfil</h1>
+            <p>Gestiona tu información personal</p>
+        </div>
+        <button id="btnVolver">Volver al Dashboard</button>
+    </header>
+
+    <div class="perfil-container">
+        <div class="perfil-layout">
+
+            <aside class="perfil-sidebar">
+                <div class="card perfil-card">
+                    <div class="perfil-avatar"></div>
+                    <h2 id="previewNombre">Cargando...</h2>
+                    <p>Usuario del sistema</p>
+                    <span id="previewRol" class="badge">---</span>
+                    
+                    <div class="perfil-data">
+                        <div>
+                            <label>Email</label>
+                            <span id="previewEmail">---</span>
+                        </div>
+                        <div>
+                            <label>Fecha nacimiento</label>
+                            <span id="previewFechaNac">---</span>
+                        </div>
+                        <div>
+                            <label>Fecha registro</label>
+                            <span id="previewFechaReg">---</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="perfil-main">
+                
+                <section class="card">
+                    <div class="section-header">
+
+                        <h2>Información Personal</h2>
+
+                        <button
+                            type="button"
+                            id="btnEditarPerfil"
+                            class="btn btn-primary">
+
+                            Editar Perfil
+
+                        </button>
+
+                    </div>
+                    <form id="formPerfil">
+
+                        <div class="form-grid">
+
+                            <div class="field">
+                                <label>Nombre Completo *</label>
+
+                                <input
+                                    id="inputNombre"
+                                    type="text"
+                                    class="form-control"
+                                    disabled>
+
+                                <div id="errorNombre" class="error-msg"></div>
+                            </div>
+
+
+                            <div class="field">
+                                <label>Email</label>
+
+                                <input
+                                    id="inputEmail"
+                                    type="email"
+                                    class="form-control"
+                                    readonly
+                                    disabled>
+                            </div>
+
+
+                            <div class="field">
+                                <label>Fecha de nacimiento *</label>
+
+                                <input
+                                    id="inputFechaNac"
+                                    type="date"
+                                    class="form-control"
+                                    disabled>
+
+                                <div id="errorFechaNac" class="error-msg"></div>
+                            </div>
+
+
+                            <div class="field">
+                                <label>Deporte favorito</label>
+
+                                <input
+                                    id="inputDeporte"
+                                    type="text"
+                                    class="form-control"
+                                    disabled>
+                            </div>
+
+
+                            <div class="field full">
+                                <label>Otros / Metadata</label>
+
+                                <textarea
+                                    id="inputMetadata"
+                                    class="form-control"
+                                    disabled></textarea>
+                            </div>
+
+                        </div>
+
+
+                        <div id="alertPerfilSuccess" class="alert alert-success d-none">
+                            Perfil actualizado correctamente
+                        </div>
+
+
+                        <div
+                            id="accionesPerfil"
+                            class="actions d-none">
+
+                            <button
+                                id="btnCancelarPerfil"
+                                type="button"
+                                class="btn btn-light">
+
+                                Cancelar
+
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="btn btn-success">
+
+                                Guardar cambios
+
+                            </button>
+
+                        </div>
+
+                    </form>
+                </section>
+
+                <section class="card">
+                    <div class="section-header">
+                        <h2>Cambiar Contraseña</h2>
+                    </div>
+                    <form id="formPassword">
+                        <div class="password-grid">
+                            <div class="field">
+                                <label>Contraseña actual</label>
+                                <div class="input-password">
+                                    <input id="inputPasswordActual" type="password" class="form-control">
+                                    <button type="button" class="toggle-password">👁</button>
+                                </div>
+                                <div id="errorPasswordActual" class="error-msg"></div>
+                            </div>
+                            <div class="field">
+                                <label>Nueva contraseña</label>
+                                <div class="input-password">
+                                    <input id="inputPasswordNueva" type="password" class="form-control">
+                                    <button type="button" class="toggle-password">👁</button>
+                                </div>
+                                <div id="errorPasswordNueva" class="error-msg"></div>
+                            </div>
+                            <div class="field">
+                                <label>Confirmar contraseña</label>
+                                <div class="input-password">
+                                    <input id="inputPasswordConfirmar" type="password" class="form-control">
+                                    <button type="button" class="toggle-password">👁</button>
+                                </div>
+                                <div id="errorPasswordConfirmar" class="error-msg"></div>
+                            </div>
+                        </div>
+                        <div id="alertPasswordSuccess" class="alert alert-success d-none">
+                            Contraseña actualizada correctamente
+                        </div>
+                        <div class="actions">
+                            <button type="submit" class="btn btn-primary">Actualizar contraseña</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/perfil.js"></script>
+</body>
+</html>

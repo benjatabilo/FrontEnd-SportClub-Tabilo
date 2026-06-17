@@ -142,3 +142,89 @@ y resolver dudas durante el desarrollo del proyecto.
 En general, la inteligencia artificial fue una ayuda útil para
 entender el desarrollo web. La IA  me sirvió para resolver dudas y 
 reforzar aprendizajes.
+
+Aquí tienes la continuación de tu documentación, manteniendo la estructura, tono y formato solicitados para la parte 2 de tu evaluación.
+
+---
+
+# DOCUMENTACIÓN DE USO DE IA - PARTE 
+
+9. USO DE IA EN INTEGRACIÓN DE BACKEND (API)
+
+Durante esta fase, utilicé la IA para comprender la comunicación entre el Front End y el Back End, resolviendo errores de conexión y consumo de datos dinámicos.
+
+Ejemplo trabajado:
+
+```javascript
+async function obtenerDatosServidor() {
+    const response = await fetch("http://localhost:3000/api/auth/me", {
+        headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` }
+    });
+    const resultado = await response.json();
+    // ...
+}
+
+```
+
+Lo que entendí de este código fue:
+
+* El uso de `async/await` para manejar procesos asíncronos.
+* La importancia de enviar el `Bearer Token` en los headers para la autenticación en rutas protegidas.
+* Cómo capturar la respuesta del servidor en formato JSON para manipularla en el DOM.
+
+Después de entender la lógica, ajusté el manejo de errores para que el usuario sea redirigido al login si el token no es válido o expira.
+
+10. USO DE IA EN MANIPULACIÓN Y LIMPIEZA DE DATOS (METADATA)
+
+La IA me ayudó a resolver un problema donde los datos de la base de datos se mostraban como código JSON crudo en la interfaz.
+
+Ejemplo trabajado:
+
+```javascript
+let notaLimpia = "";
+if (typeof metadata === "string" && !metadata.trim().startsWith("{")) {
+    notaLimpia = metadata;
+} else if (typeof metadata === "object" && metadata !== null) {
+    notaLimpia = metadata.descripcion || metadata.notas || "";
+}
+
+```
+
+Lo que entendí de esto fue:
+
+* Cómo diferenciar entre un string simple y un objeto JSON.
+* La necesidad de validar los datos antes de inyectarlos en el HTML para evitar visualizaciones técnicas no deseadas.
+* Cómo aplicar una interfaz limpia basada en la estructura del objeto recibido.
+
+Esta solución fue fundamental para cumplir con los estándares de UX/UI exigidos por el profesor.
+
+11. PROMPTS UTILIZADOS (PARTE 2)
+
+**Herramienta:** GEMINI
+- Prompt: Cómo solucionar error 404 en endpoint /api/users/me usando Express y cómo obtener el usuario logueado con JWT.
+- Resultado: Explicación sobre la existencia de rutas y uso de middleware de autenticación.
+- Modificación: Ajuste a la ruta correcta `/api/auth/me`.
+- Justificación: Resolución de problemas de conexión entre el servidor y el cliente.
+
+---
+
+**Herramienta:** GEMINI
+- Prompt: Cómo mostrar datos dinámicos de un JSON en un formulario y limpiar la metadata de una base de datos SQLite.
+- Resultado: Lógica de validación `typeof` y limpieza de objetos.
+- Modificación: Adaptación a las variables de mi base de datos (`otros` vs `metadata`).
+- Justificación: Mejora estética y funcional de la página de perfil.
+
+
+# 12. USO CORRECTO DE IA
+
+El uso de IA en esta etapa fue crucial para entender la **lógica de backend** aplicada al desarrollo frontend. Cada fragmento de código fue analizado para asegurar que no solo funcionara, sino que fuera comprensible para futuras modificaciones.
+
+13. APRENDIZAJES OBTENIDOS
+
+* Consumo de APIs protegidas con Bearer Tokens.
+* Depuración de errores HTTP (404, 401).
+* Manejo avanzado de objetos y JSON en JavaScript.
+* Sincronización de datos entre una base de datos SQLite y el DOM.
+
+# conclusion
+La IA me ayudo a entender como funciona realmente la comunicacion entre API y mi pagina creada, asi como tambien en el apoyo de manejo y funciones con JS, que es lo que hace cada linea y comprender sus condiciones.

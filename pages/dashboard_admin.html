@@ -11,203 +11,336 @@
 
 <body>
 
-    <div class="dashboard-container">
+<div class="dashboard-container">
 
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
+    <aside class="sidebar">
 
-            <div class="logo-section">
-                <img src="../assets/img/logo.png" alt="Logo SportClub" class="logo">
-            </div>
+        <div class="logo-section">
+            <img
+                src="../assets/img/logo.png"
+                alt="Logo SportClub"
+                class="logo">
+        </div>
 
-            <nav class="menu">
+        <nav class="menu">
+            <a href="#" class="active">Usuarios</a>
+            <a href="#">Reportes</a>
+            <a href="#">Configuración</a>
+            <a href="#">Clases</a>
+        </nav>
 
-                <a href="#" class="active">Usuarios</a>
+    </aside>
 
-                <a href="#">Reportes</a>
+    <main class="main-content">
 
-                <a href="#">Configuración</a>
+        <header class="topbar">
 
-                <a href="#">Clases</a>
-
-            </nav>
-
-        </aside>
-
-        <!-- MAIN -->
-        <main class="main-content">
-
-            <!-- HEADER -->
-            <header class="topbar">
-
+            <div class="header-info">
                 <h1>Panel Administrador</h1>
 
-                <div class="topbar-buttons">
+                <p id="welcomeMessage" class="welcome-message">
+                </p>
+            </div>
 
-                    <a href="#">Mi Perfil</a>
+            <div class="topbar-buttons">
+                <a href="perfil.html">Mi Perfil</a>
+                <a href="#" id="logoutBtn">Cerrar Sesión</a>
+            </div>
 
-                    <a href="../index.html">Cerrar Sesión</a>
+        </header>
 
-                </div>
+        <section class="stats-cards">
 
-            </header>
+            <div class="card">
+                <h3>Total Usuarios</h3>
+                <p id="totalUsuariosCount">0</p>
+            </div>
 
-            <!-- CARDS -->
-            <section class="stats-cards">
+            <div class="card">
+                <h3>Total Coaches</h3>
+                <p id="totalCoachesCount">0</p>
+            </div>
 
-                <div class="card">
-                    <h3>Total Usuarios</h3>
-                    <p>248</p>
-                </div>
+            <div class="card">
+                <h3>Total Clases</h3>
+                <p>32</p>
+            </div>
 
-                <div class="card">
-                    <h3>Total Coaches</h3>
-                    <p>15</p>
-                </div>
+        </section>
 
-                <div class="card">
-                    <h3>Total Clases</h3>
-                    <p>32</p>
-                </div>
+        <section class="table-section">
 
-            </section>
-
-            <!-- TABLA -->
-            <section class="table-section">
+            <div class="table-header">
 
                 <h2>Usuarios Registrados</h2>
 
-                <table>
+                <button
+                    id="btnIrAlFormulario"
+                    class="btn-new-user">
 
-                    <thead>
-                        <tr>
-                            <th>Rut</th>
-                            <th>Nombre Completo</th>
-                            <th>Rol</th>
-                            <th>Estado</th>
-                            <th>Fecha Registro</th>
-                        </tr>
-                    </thead>
+                    + Nuevo Usuario
 
-                    <tbody>
+                </button>
 
-                        <tr>
-                            <td>18.452.785-2</td>
-                            <td>Javier Torres</td>
-                            <td>Usuario</td>
-                            <td>Activo</td>
-                            <td>12/05/2026</td>
-                        </tr>
+            </div>
 
-                        <tr>
-                            <td>20.145.774-9</td>
-                            <td>Camila Soto</td>
-                            <td>Coach</td>
-                            <td>Activo</td>
-                            <td>03/02/2026</td>
-                        </tr>
+            <div
+                id="crudGlobalFeedback"
+                class="success-notification">
+            </div>
 
-                        <tr>
-                            <td>17.985.112-1</td>
-                            <td>Diego Fuentes</td>
-                            <td>Administrador</td>
-                            <td>Activo</td>
-                            <td>21/01/2026</td>
-                        </tr>
+            <table>
 
-                        <tr>
-                            <td>19.745.631-8</td>
-                            <td>Valentina Rojas</td>
-                            <td>Usuario</td>
-                            <td>Inactivo</td>
-                            <td>08/03/2026</td>
-                        </tr>
+                <thead>
 
-                        <tr>
-                            <td>21.547.884-0</td>
-                            <td>Martín López</td>
-                            <td>Coach</td>
-                            <td>Activo</td>
-                            <td>17/04/2026</td>
-                        </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre Completo</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Fecha Registro</th>
+                        <th class="center">
+                            Acciones
+                        </th>
+                    </tr>
 
-                    </tbody>
+                </thead>
 
-                </table>
+                <tbody id="usuariosTableBody">
+                </tbody>
 
-            </section>
+            </table>
 
-            <!-- REPORTES -->
-            <section class="reports-section">
+        </section>
 
-                <h2>Reportes del Sistema</h2>
+        <section
+            id="seccionFormularioUsuario"
+            class="config-section form-section">
 
-                <div class="reports-grid">
+            <h2 id="formDynamicTitle">
+                Nuevo Usuario
+            </h2>
 
-                    <div class="report-card">
-                        <h3>Clase Más Solicitada</h3>
-                        <p>Crossfit</p>
+            <p class="form-description">
+                Utiliza este panel para agregar o modificar miembros del personal y clientes.
+            </p>
+
+            <form id="crudForm" novalidate>
+
+                <input
+                    type="hidden"
+                    id="formUserId">
+
+                <div class="form-row-grid">
+
+                    <div>
+
+                        <label>
+                            Nombre Completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="inputFullName"
+                            class="form-control">
+                        <div
+                            id="errName"
+                            class="error-msg">
+
+                            El nombre es obligatorio.
+
+                        </div>
+
+                    </div>
+                    <div>
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="inputEmail"
+                            class="form-control">
+
+                        <div
+                            id="errEmail"
+                            class="error-msg">
+
+                            Email inválido o campo vacío.
+
+                        </div>
+
                     </div>
 
-                    <div class="report-card">
-                        <h3>Usuarios Activos</h3>
-                        <p>198</p>
+                    <div>
+
+                        <label>
+                            Rol
+                        </label>
+
+                        <select
+                            id="selectRole"
+                            class="form-control">
+
+                            <option value="user">user</option>
+                            <option value="coach">coach</option>
+                            <option value="admin">admin</option>
+
+                        </select>
+
                     </div>
 
-                    <div class="report-card">
-                        <h3>Reservas del Día</h3>
-                        <p>76</p>
+                </div>
+                <div
+                    class="form-row-grid"
+                    id="containerCamposClave">
+
+                    <div>
+
+                        <label>
+                            Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="inputPassword"
+                            class="form-control"
+                            placeholder="Mínimo 8 caracteres">
+                        <div
+                            id="errPassword"
+                            class="error-msg">
+
+                            La contraseña debe tener al menos 8 caracteres.
+
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <label>
+                            Confirmar Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="inputConfirmPassword"
+                            class="form-control"
+                            placeholder="Repita la contraseña">
+
+                        <div
+                            id="errConfirmPassword"
+                            class="error-msg">
+
+                            Las contraseñas no coinciden.
+
+                        </div>
+
                     </div>
 
                 </div>
 
-            </section>
+                <div class="form-actions-flex">
 
-            <!-- CONFIGURACION -->
-            <section class="config-section">
+                    <button
+                        type="button"
+                        id="btnCancelarForm"
+                        class="btn-cancel">
 
-                <h2>Configuración Rápida</h2>
+                        Cancelar
 
-                <div class="config-buttons">
+                    </button>
 
-                    <button>Crear Usuario</button>
+                    <button
+                        type="submit"
+                        id="btnGuardarForm"
+                        class="btn-save">
 
-                    <button>Editar Sistema</button>
-
-                    <button>Configuración</button>
+                        Guardar
+                    </button>
 
                 </div>
 
-            </section>
+            </form>
 
-        </main>
+        </section>
 
+        <section class="reports-section">
+
+            <h2>
+                Reportes del Sistema
+            </h2>
+
+            <div class="reports-grid">
+
+                <div class="report-card">
+                    <h3>Clase Más Solicitada</h3>
+                    <p>Crossfit</p>
+                </div>
+
+                <div class="report-card">
+                    <h3>Usuarios Activos</h3>
+                    <p>198</p>
+                </div>
+
+                <div class="report-card">
+                    <h3>Reservas del Día</h3>
+                    <p>76</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="config-section">
+
+            <h2>
+                Configuración Rápida
+            </h2>
+
+            <div class="config-buttons">
+
+                <button type="button">
+                    Crear Usuario
+                </button>
+
+                <button type="button">
+                    Editar Sistema
+                </button>
+
+                <button type="button">
+                    Configuración
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<footer>
+
+    <h3>SportClub</h3>
+
+    <p>
+        Tu mejor versión comienza hoy.
+    </p>
+
+    <div class="redes">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
     </div>
 
-    <footer>
+    <p class="copy">
+        © 2026 SportClub - Todos los derechos reservados
+    </p>
 
-        <h3>SportClub</h3>
+</footer>
 
-        <p>
-            Tu mejor version comienza hoy.
-        </p>
-
-        <div class="redes">
-
-            <a href="#">Instagram</a>
-
-            <a href="#">Facebook</a>
-
-            <a href="#">TikTok</a>
-
-        </div>
-
-        <p class="copy">
-            © 2026 SportClub - Todos los derechos reservados
-        </p>
-
-    </footer>
+<script src="../js/dashboard_admin.js"></script>
 
 </body>
-
 </html>
