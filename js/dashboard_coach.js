@@ -1,137 +1,56 @@
-// ==========================
+
 // API
-// ==========================
 
-const API_URL =
-'http://localhost:3000/api';
+const API_URL = 'http://localhost:3000/api';
 
-
-// ==========================
 // INICIO
-// ==========================
+document.addEventListener('DOMContentLoaded', async () => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        window.location.href = 'login.html';
+        return;
+    }
+    await cargarCoach();
+});
 
-document.addEventListener(
-'DOMContentLoaded',
-
-async ()=>{
-
-const token=
-localStorage.getItem(
-'token'
-);
-
-if(!token){
-
-window.location.href=
-'login.html';
-
-return;
-
-}
-
-await cargarCoach();
-
-}
-
-);
-
-
-// ==========================
 // CARGAR COACH
-// ==========================
+async function cargarCoach() {
+    try {
+        const token = localStorage.getItem('token');
+        const respuesta = await fetch(`${API_URL}/auth/me`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        });
 
-async function cargarCoach(){
+        const resultado = await respuesta.json();
+        if (!respuesta.ok) throw new Error();
 
-try{
+        const usuario = resultado.data || resultado;
 
-const token=
-localStorage.getItem(
-'token'
-);
+        // validar rol
+        if (usuario.role !== 'coach') {
+            localStorage.removeItem('token');
+            window.location.href = 'login.html';
+            return;
+        }
 
-const respuesta=
-await fetch(
-
-`${API_URL}/auth/me`,
-
-{
-
-method:'GET',
-
-headers:{
-
-'Authorization':
-`Bearer ${token}`,
-
-'Content-Type':
-'application/json'
-
+        // mostrar datos
+        mostrarBienvenida(usuario);
+    } catch (error) {
+        console.error(error);
+        localStorage.removeItem('token');
+        window.location.href = 'login.html';
+    }
 }
 
-}
-
-);
-
-const resultado=
-await respuesta.json();
-
-if(!respuesta.ok){
-
-throw new Error();
-
-}
-
-const usuario=
-resultado.data
-?
-resultado.data
-:
-resultado;
-
-mostrarBienvenida(
-usuario
-);
-
-}
-
-catch(error){
-
-console.log(error);
-
-}
-
-}
-
-
-// ==========================
 // BIENVENIDA
-// ==========================
+function mostrarBienvenida(usuario) {
+    const titulo = document.getElementById('welcomeTitle');
+    if (!titulo) return;
 
-function mostrarBienvenida(
-usuario
-){
-
-const titulo=
-document.getElementById(
-'welcomeTitle'
-);
-
-if(!titulo)
-return;
-
-const nombreCompleto=
-
-(
-usuario.full_name
-||
-usuario.name
-||
-'Usuario'
-)
-
-.trim();
-
-titulo.textContent=
-`Bienvenido ${nombreCompleto}`;
-
+    const nombreCompleto = (usuario.full_name || usuario.name || 'Usuario').trim();
+    titulo.textContent = `Bienvenido ${nombreCompleto}`;
 }

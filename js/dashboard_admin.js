@@ -1,4 +1,4 @@
-// --- Referencias del DOM ---
+// REFERENCIAS DOM
 const tableBody = document.getElementById("usuariosTableBody");
 const logoutBtn = document.getElementById("logoutBtn");
 const crudForm = document.getElementById("crudForm");
@@ -17,45 +17,60 @@ const inputConfirmPassword = document.getElementById("inputConfirmPassword");
 const totalUsuariosCount = document.getElementById("totalUsuariosCount");
 const totalCoachesCount = document.getElementById("totalCoachesCount");
 
-// --- Autenticación ---
+// AUTENTICACIÓN
 const token = localStorage.getItem("token");
-const usuarioLogueado = JSON.parse(localStorage.getItem("user"));
-
-if (!token || !usuarioLogueado || usuarioLogueado.role !== "admin") {
+if (!token) {
     window.location.href = "./login.html";
 }
 
-// --- Eventos ---
-document.addEventListener("DOMContentLoaded", () => {
-    const welcomeElement = document.createElement("p");
-    welcomeElement.style.cssText = "margin: 0; color: #555; font-size: 1rem; font-weight: bold;";
-    
-    // Obtenemos el nombre del objeto usuarioLogueado que ya tienes definido arriba
-    const nombreAdmin = usuarioLogueado ? usuarioLogueado.full_name : "Administrador";
-    welcomeElement.textContent = `Bienvenido/a, ${nombreAdmin}`;
-    
-    // Insertamos el mensaje justo después del H1 del header
-    const headerH1 = document.querySelector(".topbar h1");
-    headerH1.insertAdjacentElement('afterend', welcomeElement);
-    
-    cargarUsuarios();
-    crudForm.addEventListener("submit", procesarFormulario);
-    document.getElementById("btnCancelarForm").addEventListener("click", resetearFormularioAModoCrear);
-    
-    document.getElementById("btnIrAlFormulario").addEventListener("click", () => {
-        resetearFormularioAModoCrear();
-        seccionFormularioUsuario.style.display = "block";
-        seccionFormularioUsuario.scrollIntoView({ behavior: 'smooth' });
-    });
+// INICIO
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        const response = await fetch("http://localhost:3000/api/auth/me", {
+            method: "GET",
+            headers: { Authorization: `Bearer ${token}` }
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error();
 
-    logoutBtn.addEventListener("click", (e) => {
-        e.preventDefault();
+        const usuario = result.data || result;
+
+        // VALIDAR ADMIN
+        if (usuario.role !== "admin") {
+            localStorage.clear();
+            window.location.href = "./login.html";
+            return;
+        }
+
+        // GUARDAR USUARIO
+        localStorage.setItem("user", JSON.stringify(usuario));
+
+        // BIENVENIDA
+        const welcome = document.getElementById("welcomeMessage");
+        if (welcome) welcome.textContent = `Bienvenido/a, ${usuario.full_name}`;
+
+        // CARGAR TABLA Y EVENTOS
+        cargarUsuarios();
+        crudForm.addEventListener("submit", procesarFormulario);
+        document.getElementById("btnCancelarForm").addEventListener("click", resetearFormularioAModoCrear);
+        document.getElementById("btnIrAlFormulario").addEventListener("click", () => {
+            resetearFormularioAModoCrear();
+            seccionFormularioUsuario.style.display = "block";
+            seccionFormularioUsuario.scrollIntoView({ behavior: "smooth" });
+        });
+        logoutBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            localStorage.clear();
+            window.location.href = "../index.html";
+        });
+    } catch (error) {
+        console.log(error);
         localStorage.clear();
-        window.location.href = "../index.html";
-    });
+        window.location.href = "./login.html";
+    }
 });
 
-// --- Funciones CRUD ---
+// FUNCIONES CRUD
 
 async function cargarUsuarios() {
     try {
@@ -72,7 +87,7 @@ async function cargarUsuarios() {
 
         listaUsuarios.forEach(user => {
             const tr = document.createElement("tr");
-            const badgeClass = `bg-${user.role}`; // Asume que tienes bg-admin, bg-coach, bg-user en CSS
+            const badgeClass = `bg-${user.role}`;
             const fechaFormateada = formatearFecha(user.createdAt || user.created_at);
 
             tr.innerHTML = `
@@ -102,7 +117,7 @@ window.activarModoEdicionInSitu = function(id, name, email, role) {
     formDynamicTitle.textContent = `Editar Usuario #${id}`;
     containerCamposClave.style.display = "none";
     seccionFormularioUsuario.style.display = "block";
-    seccionFormularioUsuario.scrollIntoView({ behavior: 'smooth' });
+    seccionFormularioUsuario.scrollIntoView({ behavior: "smooth" });
 };
 
 function resetearFormularioAModoCrear() {
@@ -168,7 +183,7 @@ window.eliminarUsuarioId = async function(id) {
     } catch (err) { console.error("Error al eliminar:", err); }
 };
 
-// --- Helpers ---
+// HELPERS
 function encenderErrorVisual(el, id) { el.classList.add("input-error"); document.getElementById(id).style.display = "block"; }
 function limpiarErroresEstilos() {
     crudForm.querySelectorAll("input, select").forEach(i => i.classList.remove("input-error"));
@@ -180,12 +195,11 @@ function lanzarFeedbackNotificacion(msj) {
     setTimeout(() => { crudGlobalFeedback.style.display = "none"; }, 4000);
 }
 function formatearFecha(f) {
-    // 1. Si el backend no envía nada, generamos la fecha actual dinámicamente
+
     if (!f) return new Date().toLocaleDateString('es-CL');
-    
+
     const d = new Date(f);
-    
-    // 2. Si la fecha que envió el backend es inválida, también usamos la fecha actual
+
     return isNaN(d.getTime()) ? new Date().toLocaleDateString('es-CL') : d.toLocaleDateString('es-CL');
 }
 function actualizarCardsSuperiores(u) {
