@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cambiarModoEdicion(false);
 });
 
-// HELPERS
+// Hepers
 function capitalizar(texto) {
     if (!texto) return '';
     return texto.toLowerCase().replace(/\b\w/g, letra => letra.toUpperCase());
@@ -40,7 +40,7 @@ function mostrarError(input, error, mensaje) {
     document.getElementById(error).textContent = mensaje;
 }
 
-// CARGAR DATOS
+// Cargar datos
 async function cargarDatosPerfil(token) {
     try {
         const respuesta = await fetch(`${API_URL}/auth/me`, {
@@ -110,8 +110,7 @@ document.getElementById('formPerfil').addEventListener('submit', async (e) => {
     } catch { alert('Error al actualizar perfil'); }
 });
 
-// GESTIÓN CONTRASEÑA
-// GESTIÓN CONTRASEÑA
+// modificar contraseñas
 function configurarPassword() {
     document.getElementById('formPassword').addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -140,7 +139,7 @@ function configurarPassword() {
             });
 
             if (response.ok) {
-                // Estilo verde solicitado
+
                 const alerta = document.getElementById('alertPasswordSuccess');
                 alerta.textContent = "Contraseña actualizada correctamente";
                 alerta.classList.add('alert-success');
@@ -152,7 +151,7 @@ function configurarPassword() {
                     alerta.classList.remove('alert-success');
                 }, 3000);
             } else {
-                // Esto maneja errores como "contraseña actual incorrecta"
+                // Esto maneja errores como contraseña actual incorrecta
                 mostrarError('inputPasswordActual', 'errorPasswordActual', 'Contraseña actual incorrecta');
             }
         } catch (err) { 
@@ -170,7 +169,7 @@ function configurarPassword() {
     });
 }
 
-// OTROS
+// botones formularios
 function configurarBotonVolver() {
     document.getElementById('btnVolver')?.addEventListener('click', () => {
         const rol = document.getElementById('previewRol').textContent.trim().toLowerCase();

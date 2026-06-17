@@ -15,9 +15,7 @@ body{
 }
 
 
-/* ==========================
-LAYOUT
-========================== */
+/* layout */
 
 .dashboard-container{
     display:flex;
@@ -76,9 +74,7 @@ SIDEBAR
 }
 
 
-/* ==========================
-TOPBAR
-========================== */
+/* topbar*/
 
 .topbar{
     display:flex;
@@ -125,9 +121,8 @@ TOPBAR
 }
 
 
-/* ==========================
-CARDS
-========================== */
+/* 
+CARDS */
 
 .stats-cards,
 .reports-grid{
@@ -229,9 +224,7 @@ table td{
 }
 
 
-/* ==========================
-BOTONES
-========================== */
+/* botones */
 
 #btnIrAlFormulario{
     background:#F2B705;
@@ -303,9 +296,7 @@ BOTONES
 }
 
 
-/* ==========================
-FORMULARIO CRUD
-========================== */
+/* FORMULARIO CRUD */
 
 #seccionFormularioUsuario{
     display:none;
@@ -358,9 +349,7 @@ FORMULARIO CRUD
 }
 
 
-/* ==========================
-VALIDACIONES
-========================== */
+/* valid. */
 
 .error-msg{
     display:none;
@@ -430,9 +419,7 @@ BADGES
 }
 
 
-/* ==========================
-ACCIONES TABLA
-========================== */
+/* boton acciones de la tabla */
 
 .btn-action{
     border:none;
@@ -459,9 +446,7 @@ ACCIONES TABLA
 }
 
 
-/* ==========================
-CONFIGURACIÓN
-========================== */
+/* configuracion */
 
 .config-section h2,
 .reports-section h2{
@@ -505,9 +490,7 @@ CONFIGURACIÓN
 }
 
 
-/* ==========================
-FOOTER
-========================== */
+/* footer */
 
 footer{
     padding:50px 20px;
@@ -544,9 +527,7 @@ footer h3{
 }
 
 
-/* ==========================
-RESPONSIVE
-========================== */
+/* RESPONSIVE */
 
 @media(max-width:900px){
 

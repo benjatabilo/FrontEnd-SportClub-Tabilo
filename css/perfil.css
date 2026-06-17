@@ -74,9 +74,7 @@ CONTENEDOR
 }
 
 
-/* ==========================
-CARDS
-========================== */
+/* cards */
 
 .card{
     background:white;
@@ -154,9 +152,7 @@ SIDEBAR
 }
 
 
-/* ==========================
-SECCIONES
-========================== */
+/* SECCIONES */
 
 .section-header{
     display:flex;
@@ -174,9 +170,7 @@ SECCIONES
 }
 
 
-/* ==========================
-FORMULARIOS
-========================== */
+/* formularios */
 
 .form-grid{
     display:grid;
@@ -224,9 +218,7 @@ textarea.form-control{
 }
 
 
-/* ==========================
-EDITAR PERFIL
-========================== */
+/*  botono editar perfil */
 
 .form-control:disabled{
     background:#F8FAFC;
@@ -243,9 +235,9 @@ EDITAR PERFIL
 }
 
 
-/* ==========================
-PASSWORD
-========================== */
+/* 
+contraseña
+ */
 
 .input-password{
     display:grid;
@@ -261,9 +253,8 @@ PASSWORD
 }
 
 
-/* ==========================
-VALIDACIONES
-========================== */
+/* 
+validaciones */
 
 .input-error{
     border:2px solid #DC2626 !important;
@@ -277,9 +268,8 @@ VALIDACIONES
 }
 
 
-/* ==========================
-BOTONES
-========================== */
+/* 
+botones */
 
 .actions{
     margin-top:18px;
@@ -317,9 +307,7 @@ BOTONES
 }
 
 
-/* ==========================
-ALERTAS
-========================== */
+/* alertas */
 
 .alert{
     margin-top:14px;
@@ -362,6 +350,7 @@ RESPONSIVE
 
 }
 
+/*alertas de cambio de contraseña y modificaciones*/
 .alert {
     margin-top: 14px;
     padding: 12px;
@@ -369,6 +358,7 @@ RESPONSIVE
     text-align: center;
 }
 
+/*mensaje exito*/
 .alert-success {
     background: #DCFCE7; /* Fondo verde claro */
     color: #166534;      /* Texto verde oscuro */

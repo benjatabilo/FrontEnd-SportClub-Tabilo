@@ -9,13 +9,13 @@ function mostrarError(texto, inputElement = null) {
     mensajeError.style.display = "block";
     mensajeError.textContent = texto;
     
-    // Si pasamos el input, le ponemos borde rojo
+    // Si pasamos el input, se coloca borde rojo
     if (inputElement) {
         inputElement.style.borderColor = "red";
     }
 }
 
-// Función para limpiar estados previos
+//Función para limpiar estados previos
 function ocultarMensajes() {
     mensajeError.style.display = "none";
     mensajeExito.style.display = "none";
@@ -33,11 +33,12 @@ form.addEventListener("submit", async function (e) {
     const nombre = document.getElementById("nombre").value.trim();
     const correo = document.getElementById("correo").value.trim();
     const password = document.getElementById("password").value;
+
     const confirmPassword = document.getElementById("confirmPassword").value;
     const fecha = document.getElementById("fechaNacimiento").value;
     const actividad = document.getElementById("actividad").value;
 
-    // --- VALIDACIONES ---
+    // validaciones
     if (!nombre || !correo || !password || !confirmPassword) {
         mostrarError("Complete todos los campos obligatorios");
         return;
@@ -65,7 +66,7 @@ form.addEventListener("submit", async function (e) {
         return;
     }
 
-    // --- ENVÍO A API ---
+    // envio hacia api
     try {
         const response = await fetch("http://localhost:3000/api/auth/register", {
             method: "POST",
@@ -92,16 +93,16 @@ form.addEventListener("submit", async function (e) {
             mostrarError(result.message || "No se pudo registrar, intente nuevamente");
             return;
         }
-
-        // Éxito
+        // Mensaje Éxito
         mensajeExito.style.display = "block";
         mensajeExito.textContent = "Usuario registrado correctamente.";
         
-        // Redirección tras 1.5s
+        // Redirección.
         setTimeout(() => {
             window.location.href = "./login.html";
         }, 1500);
 
+        
     } catch (error) {
         console.error("Error al conectar:", error);
         mostrarError("Error crítico al conectar con el servidor.");

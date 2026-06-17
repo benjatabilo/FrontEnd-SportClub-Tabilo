@@ -3,7 +3,7 @@
 
 const API_URL = 'http://localhost:3000/api';
 
-// INICIO
+// inciioo
 document.addEventListener('DOMContentLoaded', async () => {
     const token = localStorage.getItem('token');
     if (!token) {
@@ -46,7 +46,7 @@ async function cargarCoach() {
     }
 }
 
-// BIENVENIDA
+// binvenida
 function mostrarBienvenida(usuario) {
     const titulo = document.getElementById('welcomeTitle');
     if (!titulo) return;

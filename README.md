@@ -97,3 +97,45 @@ Esto permite identificar rápidamente el tipo de perfil dentro del sistema.
 - Organización modular de archivos
 - Estilos personalizados con CSS
 - Interactividad básica con JavaScript.
+
+----------------------------------------
+#PARTE 2 EV: 
+----------------------------------------
+
+La segunda etapa la pagina  web dinámica capaz de interactuar con servicios web (API) para la gestión real de datos y autenticación.
+
+
+# Principales avances:
+
+- Conectividad: Integración de la plataforma con una API REST en localhost:3000.
+- Autenticación real: Implementación de flujo de login y manejo seguro de tokens en localStorage.
+- Persistencia de perfil: CRUD completo para la gestión de datos personales.
+- Validaciones: Sistema de control de errores tanto en formularios de perfil como en cambio de contraseña.
+
+
+# Tecnologías Utilizadas
+- HTML5 / CSS3
+- JavaScript
+- API(Consumo mediante fetch)
+- LocalStorage (Persistencia de sesión)
+
+# Estructura del Proyecto
+Se mantiene la estructura con las siguientes actualizaciones:
+
+/css           = Estilos (con clases nuevas para alertas de éxito)
+/js            = Scripts JavaScript (Lógica de API y control de estados)
+/pages         = Páginas HTML (Interacción dinámica con el DOM)
+index.html
+README.md      = Documentación
+IA.md          = Registro de asistencia por IA
+
+# Funcionalidades Principales (Parte 2)
+- Gestión de Perfil Dinámica
+- Renderizado en tiempo real: Los datos del usuario se cargan directamente desde el servidor al iniciar sesión.
+- Edición funcional: Los usuarios pueden modificar su información y ver los cambios reflejados.
+- Manejo de estados: Intercambio automático entre modo "Lectura" y "Edición".
+
+- Seguridad y Contraseñas: Cambio de contraseña: Formulario protegido que valida la contraseña actual y la confirmación de la nueva mediante peticiones PUT.
+
+- validaciones robustas
+- protección de rutas: Redirección automática al login si el usuario no cuenta con un token de sesión válido.
